@@ -1,0 +1,49 @@
+Backtracking 
+============
+
+Knight's Tour
+-------------
+
+:Time Complexity: :math:`O(M^{N^2})`
+:Auxiliary Space: :math:`O(N^2)`
+
+.. code-block:: c++
+    
+    #include <bits/stdc++.h>
+    using namespace std;
+
+    bool util(int x, int y, int c, vector<vector<int>>& sol, int N, int M, vector<int>& dx, vector<int>& dy) {
+        if (x<0 || x>N-1 || y<0 || y>N-1 || sol[x][y]!=0)
+            return false;
+        sol[x][y] = c;
+        if (c==N*N)
+            return true;
+        for (int i=0; i<M; ++i) {
+            if (util(x+dx[i], y+dy[i], c+1, sol, N, M, dx, dy))
+                return true;
+        }
+        sol[x][y] = 0;
+        return false;
+    }
+
+    void solve(int N, int M, vector<int>& dx, vector<int>& dy) {
+        vector<vector<int>> sol(N, vector<int>(N));
+        if (util(0, 0, 1, sol, N, M, dx, dy)) {
+            for (int i=0; i<N; ++i) {
+                for (int j=0; j<N; ++j)
+                    cout << setw(3) << sol[i][j];
+                cout << '\n';
+            }
+        }
+        else
+            cout << -1 << '\n';
+    }
+
+    int main () {
+        int N{8};
+        int M{8};
+        vector<int> dx{2, 1, -1, -2, -2, -1, 1, 2};
+        vector<int> dy{1, 2, 2, 1, -1, -2, -2, -1};
+        solve(N, M, dx, dy);
+        return 0;
+    }

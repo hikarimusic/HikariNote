@@ -174,3 +174,45 @@ N Queen
         solve(N);
         return 0;
     }
+
+Subset Sum
+----------
+
+:Time Complexity: :math:`O(2^N)`
+:Auxiliary Space: :math:`O(N)`
+
+.. code-block:: c++
+
+    #include <bits/stdc++.h>
+    using namespace std;
+
+    void util(int x, int s, vector<int>& sol, int N, vector<int>& Set, int S) {
+        if (s==S) {
+            for (int i=0; i<N; ++i) {
+                if (sol[i])
+                    cout << Set[i] << ' ';
+            }
+            cout << '\n';
+        }
+        for (int i=x; i<N; ++i) {
+            if (s+Set[i]>S)
+                break;
+            sol[i] = 1;
+            util(i+1, s+Set[i], sol, N, Set, S);
+            sol[i] = 0;
+        }
+    }
+
+    void solve(int N, vector<int>& Set, int S) {
+        sort(Set.begin(), Set.end());
+        vector<int> sol(N);
+        util(0, 0, sol, N, Set, S);
+    }
+
+    int main() {
+        int N{8};
+        vector<int> Set{15, 22, 14, 26, 32, 9, 16, 8};
+        int S{53};
+        solve(N, Set, S);
+        return 0;
+    }

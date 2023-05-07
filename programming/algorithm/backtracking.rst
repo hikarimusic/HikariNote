@@ -216,3 +216,66 @@ Subset Sum
         solve(N, Set, S);
         return 0;
     }
+
+M Coloring
+----------
+
+:Time Complexity: :math:`O(M^N)`
+:Auxiliary Space: :math:`O(N)`
+
+.. code-block:: c++
+
+    #include <bits/stdc++.h>
+    using namespace std;
+
+    bool safe(int x, int c, vector<int>& sol, vector<vector<int>>& adj) {
+        for (int y : adj[x]) {
+            if (sol[y]==c)
+                return false;
+        }
+        return true;
+    }
+
+    bool util(int x, vector<int>& sol, int N, vector<vector<int>>& adj, int M) {
+        if (x==N)
+            return true;
+        for (int c=1; c<=M; ++c) {
+            if (safe(x, c, sol, adj)) {
+                sol[x] = c;
+                if (util(x+1, sol, N, adj, M))
+                    return true;
+                sol[x] = 0;
+            }
+        }
+        return false;
+    }
+
+    void solve(int N, vector<vector<int>>& adj, int M) {
+        vector<int> sol(N);
+        if (util(0, sol, N, adj, M)) {
+            for (int i=0; i<N; ++i)
+                cout << sol[i] << ' ';
+            cout << '\n';
+        }
+        else
+            cout << -1 << '\n';
+    }
+
+    int main() {
+        int N{10};
+        vector<vector<int>> adj{
+            {1, 4, 5},
+            {0, 2, 6},
+            {1, 3, 7},
+            {2, 4, 8},
+            {0, 3, 9},
+            {0, 7, 8},
+            {1, 8, 9},
+            {2, 5, 9},
+            {3, 5, 6},
+            {4, 6, 7}
+        };
+        int M{3};
+        solve(N, adj, M);
+        return 0;
+    }

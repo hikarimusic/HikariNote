@@ -279,3 +279,64 @@ M Coloring
         solve(N, adj, M);
         return 0;
     }
+
+Hamiltonian Cycle
+-----------------
+
+:Time Complexity: :math:`O(N!)`
+:Auxiliary Space: :math:`O(N)`
+
+.. code-block:: c++
+
+    #include <bits/stdc++.h>
+    using namespace std;
+
+    bool safe(int x, int y, vector<int>& sol, int N, vector<vector<bool>>& adj) {
+        if (!adj[x][y])
+            return false;
+        for (int i=0; i<N; ++i) {
+            if (sol[i]==y)
+                return false;
+        }
+        return true;
+    }
+
+    bool util(int x, int c, vector<int>& sol, int N, vector<vector<bool>>& adj) {
+        if (c==N)
+            return true;
+        for (int y=0; y<N; ++y) {
+            if (safe(x, y, sol, N, adj)) {
+                sol[c] = y;
+                if (util(y, c+1, sol, N, adj))
+                    return true;
+                sol[c] = 0;
+            }
+        }
+        return false;
+    }
+
+    void solve(int N, vector<vector<bool>>& adj) {
+        vector<int> sol(N, -1);
+        sol[0] = 0;
+        if (util(0, 1, sol, N, adj)) {
+            for (int i=0; i<N; ++i)
+                cout << sol[i] << ' ';
+            cout << sol[0] << '\n';
+        }
+        else
+            cout << -1 << '\n';
+    }
+
+    int main() {
+        int N{6};
+        vector<vector<bool>> adj{
+            {0, 1, 0, 0, 1, 1},
+            {1, 0, 1, 1, 1, 0},
+            {0, 1, 0, 1, 0, 0},
+            {0, 1, 1, 0, 1, 1},
+            {1, 1, 0, 1, 0, 1},
+            {1, 0, 0, 1, 1, 0}
+        };
+        solve(N, adj);
+        return 0;
+    }

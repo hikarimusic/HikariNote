@@ -340,3 +340,78 @@ Hamiltonian Cycle
         solve(N, adj);
         return 0;
     }
+
+Sudoku
+------
+
+:Time Complexity: :math:`O(9^{N^2})`
+:Auxiliary Space: :math:`O(1)`
+
+.. code-block:: c++
+
+    #include <bits/stdc++.h>
+    using namespace std;
+
+    bool safe(int x, int c, vector<vector<int>>& sdk) {
+        int pi{x/9}, pj{x%9};
+        for (int i=0; i<9; ++i) {
+            if (sdk[i][pj]==c)
+                return false;
+        }
+        for (int j=0; j<9; ++j) {
+            if (sdk[pi][j]==c)
+                return false;
+        }
+        for (int i=pi-pi%3; i<pi-pi%3+3; ++i) {
+            for (int j=pj-pj%3; j<pj-pj%3+3; ++j) {
+                if (sdk[i][j]==c)
+                    return false;
+            }
+        }
+        return true;
+    }
+
+    bool util(int x, vector<vector<int>>& sdk) {
+        if (x==81)
+            return true;
+        int pi{x/9}, pj{x%9};
+        if (sdk[pi][pj])
+            return util(x+1, sdk);
+        for (int c=1; c<=9; ++c) {
+            if (safe(x, c, sdk)) {
+                sdk[pi][pj] = c;
+                if (util(x+1, sdk))
+                    return true;
+                sdk[pi][pj] = 0;
+            }
+        }
+        return false;
+    }
+
+    void solve(vector<vector<int>>& sdk) {
+        if (util(0, sdk)) {
+            for (int i=0; i<9; ++i) {
+                for (int j=0; j<9; ++j)
+                    cout << sdk[i][j] << ' ';
+                cout << '\n';
+            }
+        }
+        else
+            cout << -1 << '\n';
+    }
+
+    int main() {
+        vector<vector<int>> sdk{
+            { 3, 0, 6, 5, 0, 8, 4, 0, 0 },
+            { 5, 2, 0, 0, 0, 0, 0, 0, 0 },
+            { 0, 8, 7, 0, 0, 0, 0, 3, 1 },
+            { 0, 0, 3, 0, 1, 0, 0, 8, 0 },
+            { 9, 0, 0, 8, 6, 3, 0, 0, 5 },
+            { 0, 5, 0, 0, 9, 0, 6, 0, 0 },
+            { 1, 3, 0, 0, 0, 0, 2, 5, 0 },
+            { 0, 0, 0, 0, 0, 0, 0, 7, 4 },
+            { 0, 0, 5, 2, 0, 6, 3, 0, 0 }
+        };
+        solve(sdk);
+        return 0;
+    }

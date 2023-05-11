@@ -415,3 +415,35 @@ Sudoku
         solve(sdk);
         return 0;
     }
+
+String Permutation
+------------------
+
+:Time Complexity: :math:`O(N!)`
+:Auxiliary Space: :math:`O(1)`
+
+.. code-block:: c++
+
+    #include <bits/stdc++.h>
+    using namespace std;
+
+    void util(int x, int N, string& str) {
+        if (x==N)
+            cout << str << '\n';
+        for (int i=x; i<N; ++i) {
+            swap(str[x], str[i]);
+            util(x+1, N, str);
+            swap(str[x], str[i]);
+        }
+    }
+
+    void solve(int N, string& str) {
+        util(0, N, str);
+    }
+
+    int main() {
+        int N{3};
+        string str{"ABC"};
+        solve(N, str);
+        return 0;
+    }

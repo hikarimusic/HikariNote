@@ -447,3 +447,55 @@ String Permutation
         solve(N, str);
         return 0;
     }
+
+Tug of War
+----------
+
+:Time Complexity: :math:`O(2^N)`
+:Auxiliary Space: :math:`O(N)`
+
+.. code-block:: c++
+
+    #include <bits/stdc++.h>
+    using namespace std;
+
+    void util(int x, int c, vector<int>& sol, vector<int>& fin, int& sm, int N, vector<int>& arr) {
+        if (c==N/2) {
+            int st{};
+            for (int i=0; i<N; ++i)
+                st += arr[i]*(sol[i]?1:-1);
+            if (abs(st)<sm) {
+                for (int i=0; i<N; ++i)
+                    fin[i] = sol[i];
+                sm = abs(st);
+            }
+            return;
+        }
+        for (int y=x; y<N; ++y) {
+            sol[y] = 1;
+            util(y+1, c+1, sol, fin, sm, N, arr);
+            sol[y] = 0;
+        }
+    }
+
+    void solve(int N, vector<int>& arr) {
+        vector<int> sol(N);
+        vector<int> fin(N);
+        int sm{INT_MAX};
+        util(0, 0, sol, fin, sm, N, arr);
+        for (int i=0; i<N; ++i)
+            if (fin[i])
+                cout << arr[i] << ' ';
+        cout << '\n';
+        for (int i=0; i<N; ++i)
+            if (!fin[i])
+                cout << arr[i] << ' ';
+        cout << '\n';
+    }
+
+    int main() {
+        int N{11};
+        vector<int> arr{23, 45, -34, 12, 0, 98, -99, 4, 189, -1, 4};
+        solve(N, arr);
+        return 0;
+    }

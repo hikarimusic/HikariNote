@@ -5,4 +5,7 @@
    :maxdepth: 2
 
    medicine/index
-   programming/index 
+   information/index
+   others/index
+
+   working/index

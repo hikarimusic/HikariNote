@@ -115,3 +115,83 @@ Binary Search Tree
     .. code-tab:: c++
 
         working
+
+Binary Heap
+-----------
+
+:push: :math:`O(\log{N})`
+:pop: :math:`O(\log{N})`
+:peek: :math:`O(1)`
+
+.. tabs::
+    
+    .. code-tab:: python
+
+        class BinaryHeap:
+            def __init__(self, capicity):
+                self.capicity = capicity
+                self.tree = [0 for x in range(capicity)]
+                self.size = 0
+            
+            def heapify_up(self, x):
+                y = x
+                if int((x-1)/2) >= 0:
+                    if self.tree[int((x-1)/2)] < self.tree[y]:
+                        y = int((x-1)/2)
+                if x != y:
+                    self.tree[x], self.tree[y] = self.tree[y], self.tree[x]
+                    self.heapify_up(y)
+            
+            def heapify_down(self, x):
+                y = x
+                if x*2+1 < self.size:
+                    if self.tree[x*2+1] > self.tree[y]:
+                        y = x*2+1
+                if x*2+2 < self.size:
+                    if self.tree[x*2+2] > self.tree[y]:
+                        y = x*2+2
+                if x != y:
+                    self.tree[x], self.tree[y] = self.tree[y], self.tree[x]
+                    self.heapify_down(y)
+            
+            def push(self, data):
+                if self.size == self.capicity:
+                    return
+                self.tree[self.size] = data
+                self.size += 1
+                self.heapify_up(self.size-1)
+            
+            def pop(self):
+                if self.size == 0:
+                    return
+                self.tree[0] = self.tree[self.size-1]
+                self.size -= 1
+                self.heapify_down(0)
+            
+            def peek(self):
+                return self.tree[0]
+
+        if __name__ == '__main__':
+            heap = BinaryHeap(100)
+            heap.push(2)
+            heap.push(6)
+            heap.push(1)
+            heap.pop()
+            heap.push(10)
+            heap.push(3)
+            heap.push(9)
+            heap.pop()
+            heap.push(5)
+            heap.push(7)
+            heap.push(4)
+            heap.push(8)
+            heap.pop()
+            print(heap.peek())
+            heap.pop()
+            print(heap.peek())
+            heap.pop()
+            print(heap.peek())
+
+    .. code-tab:: c++
+
+        working

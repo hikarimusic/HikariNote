@@ -361,3 +361,140 @@ Red-Black Tree
     .. code-tab:: c++
 
         working
+
+Treap
+-----
+
+:insert: :math:`O(\log{N})` (averaged)
+:delete: :math:`O(\log{N})` (averaged)
+:search: :math:`O(\log{N})` (averaged)
+
+.. tabs::
+
+    .. code-tab:: python
+
+        import random
+
+        class Node:
+            def __init__(self, data):
+                self.data = data
+                self.prior = 0
+                self.left = None
+                self.right = None 
+                self.parent = None
+
+        class Treap:
+            def __init__(self):
+                self.null = Node(0)
+                self.root = self.null
+
+            def append(self, p, lr, x):
+                if p == self.null:
+                    self.root = x
+                elif lr == 0:
+                    p.left = x
+                else:
+                    p.right = x
+                x.parent = p
+            
+            def transplant(self, x, y):
+                if x.parent == self.null:
+                    self.root = y
+                elif x == x.parent.left:
+                    x.parent.left = y
+                else:
+                    x.parent.right = y
+                y.parent = x.parent
+            
+            def rotate_left(self, x):
+                y = x.right
+                self.append(x, 1, y.left)
+                self.transplant(x, y)
+                self.append(y, 0, x)
+            
+            def rotate_right(self, x):
+                y = x.left
+                self.append(x, 0, y.right)
+                self.transplant(x, y)
+                self.append(y, 1, x)
+
+            def insert(self, data):
+                x = Node(data)
+                x.prior = random.randrange(100)
+                x.left = self.null
+                x.right = self.null
+                p = self.null
+                c = self.root
+                lr = 0
+                while c != self.null:
+                    p = c
+                    if data < c.data:
+                        c = c.left
+                        lr = 0
+                    else:
+                        c = c.right
+                        lr = 1
+                self.append(p, lr, x)
+                while x != self.root and x.prior > x.parent.prior:
+                    if x == x.parent.left:
+                        self.rotate_right(x.parent)
+                    else:
+                        self.rotate_left(x.parent)
+
+            def delete(self, data):
+                x = self.root
+                while x != self.null and x.data != data:
+                    if data < x.data:
+                        x = x.left
+                    else:
+                        x = x.right
+                if x == self.null:
+                    return
+                fg = 0
+                while fg == 0:
+                    if x.left == self.null:
+                        self.transplant(x, x.right)
+                        fg = 1
+                    elif x.right == self.null:
+                        self.transplant(x, x.left)
+                        fg = 1
+                    else:
+                        if x.left.prior > x.right.prior:
+                            self.rotate_right(x)
+                        else:
+                            self.rotate_left(x)
+            
+            def search(self, data):
+                x = self.root
+                while x != self.null and x.data != data:
+                    if data < x.data:
+                        x = x.left
+                    else:
+                        x = x.right
+                if x == self.null:
+                    return False
+                return True
+
+        if __name__ == '__main__':
+            tree = Treap()
+            tree.insert(7)
+            tree.insert(2)
+            tree.insert(10)
+            tree.insert(8)
+            tree.insert(9)
+            tree.delete(8)
+            tree.insert(6)
+            tree.insert(1)
+            tree.insert(4)
+            tree.delete(7)
+            tree.delete(4)
+            tree.insert(3)
+            tree.delete(6)
+            tree.insert(5)
+            for i in range(1, 11):
+                if tree.search(i):
+                    print(i)
+
+    .. code-tab:: c++
+
+        working

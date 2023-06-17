@@ -124,7 +124,7 @@ Binary Heap
 :peek: :math:`O(1)`
 
 .. tabs::
-    
+
     .. code-tab:: python
 
         class BinaryHeap:
@@ -133,40 +133,35 @@ Binary Heap
                 self.tree = [0 for x in range(capicity)]
                 self.size = 0
             
-            def heapify_up(self, x):
-                y = x
-                if int((x-1)/2) >= 0:
-                    if self.tree[int((x-1)/2)] < self.tree[y]:
-                        y = int((x-1)/2)
-                if x != y:
-                    self.tree[x], self.tree[y] = self.tree[y], self.tree[x]
-                    self.heapify_up(y)
-            
-            def heapify_down(self, x):
-                y = x
-                if x*2+1 < self.size:
-                    if self.tree[x*2+1] > self.tree[y]:
-                        y = x*2+1
-                if x*2+2 < self.size:
-                    if self.tree[x*2+2] > self.tree[y]:
-                        y = x*2+2
-                if x != y:
-                    self.tree[x], self.tree[y] = self.tree[y], self.tree[x]
-                    self.heapify_down(y)
-            
             def push(self, data):
                 if self.size == self.capicity:
                     return
                 self.tree[self.size] = data
                 self.size += 1
-                self.heapify_up(self.size-1)
+                x = -1
+                y = self.size - 1
+                while x != y:
+                    x = y
+                    if (x-1)//2 >= 0 and self.tree[(x-1)//2] < self.tree[y]:
+                        y = (x-1)//2
+                    if x != y:
+                        self.tree[x], self.tree[y] = self.tree[y], self.tree[x]
             
             def pop(self):
                 if self.size == 0:
                     return
                 self.tree[0] = self.tree[self.size-1]
                 self.size -= 1
-                self.heapify_down(0)
+                x = -1
+                y = 0
+                while x != y:
+                    x = y
+                    if x*2+1 < self.size and self.tree[x*2+1] > self.tree[y]:
+                        y = x*2+1
+                    if x*2+2 < self.size and self.tree[x*2+2] > self.tree[y]:
+                        y = x*2+2
+                    if x != y:
+                        self.tree[x], self.tree[y] = self.tree[y], self.tree[x]
             
             def peek(self):
                 return self.tree[0]

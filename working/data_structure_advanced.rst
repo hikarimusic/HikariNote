@@ -498,3 +498,123 @@ Treap
     .. code-tab:: c++
 
         working
+
+Segment Tree
+------------
+
+:build: :math:`O(N)`
+:query: :math:`O(\log{N})`
+:update: :math:`O(\log{N})`
+
+.. tabs::
+
+    .. code-tab:: python
+
+        class SegmentTree:
+            def __init__(self, size):
+                self.size = size
+                self.tree = [0 for i in range(4*size)]
+            
+            def build_util(self, v, tl, tr, array):
+                if tl == tr:
+                    self.tree[v] = array[tl]
+                    return
+                tm = (tl + tr) // 2
+                self.build_util(v*2+1, tl, tm, array)
+                self.build_util(v*2+2, tm+1, tr, array)
+                self.tree[v] = self.tree[v*2+1] + self.tree[v*2+2]
+
+            def query_util(self, v, tl, tr, l, r):
+                if l > r:
+                    return 0
+                if tl == l and tr == r:
+                    return self.tree[v]
+                tm = (tl + tr) // 2
+                s1 = self.query_util(v*2+1, tl, tm, l, min(tm, r))
+                s2 = self.query_util(v*2+2, tm+1, tr, max(tm+1, l), r)
+                return s1 + s2
+            
+            def update_util(self, v, tl, tr, pos, val):
+                if tl == tr:
+                    self.tree[v] = val
+                    return
+                tm = (tl + tr) // 2
+                if pos <= tm:
+                    self.update_util(v*2+1, tl, tm, pos, val)
+                else:
+                    self.update_util(v*2+2, tm+1, tr, pos, val)
+                self.tree[v] = self.tree[v*2+1] + self.tree[v*2+2]
+
+            def build(self, array):
+                self.build_util(0, 0, self.size-1, array)
+            
+            def query(self, l, r):
+                return self.query_util(0, 0, self.size-1, l, r)
+            
+            def update(self, pos, val):
+                self.update_util(0, 0, self.size-1, pos, val)
+
+        if __name__ == '__main__':
+            tree = SegmentTree(10)
+            tree.build([3, 9, 7, 9, 5, 6, 8, 10, 1, 10])
+            print(tree.query(4, 7))
+            tree.update(3, 2)
+            print(tree.query(0, 4))
+            tree.update(7, 4)
+            print(tree.query(0, 9))
+
+    .. code-tab:: c++
+
+        working
+
+Fenwick Tree
+------------
+
+:build: :math:`O(N)`
+:query: :math:`O(\log{N})`
+:update: :math:`O(\log{N})`
+
+.. tabs::
+
+    .. code-tab:: python
+
+        class FenwickTree:
+            def __init__(self, size):
+                self.size = size
+                self.tree = [0 for i in range(size)]
+            
+            def query_util(self, r):
+                res = 0
+                while r >= 0:
+                    res += self.tree[r]
+                    r = (r & (r+1)) - 1
+                return res
+
+            def build(self, array):
+                for i in range(self.size):
+                    self.tree[i] += array[i]
+                    j = i | (i+1)
+                    if j < self.size:
+                        self.tree[j] += self.tree[i]
+
+            def query(self, l, r):
+                return self.query_util(r) - self.query_util(l-1)
+            
+            def update(self, i, v):
+                add = v - self.query(i, i)
+                while i < self.size:
+                    self.tree[i] += add
+                    i = i | (i+1)
+
+        if __name__ == '__main__':
+            tree = FenwickTree(10)
+            tree.build([3, 9, 7, 9, 5, 6, 8, 10, 1, 10])
+            print(tree.query(4, 7))
+            tree.update(3, 2)
+            print(tree.query(0, 4))
+            tree.update(7, 4)
+            print(tree.query(0, 9))
+
+    .. code-tab:: c++
+
+        working

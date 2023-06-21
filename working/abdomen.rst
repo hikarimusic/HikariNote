@@ -46,7 +46,8 @@ Esophagus (Abdominal Part)
 Stomach 
 ^^^^^^^
 
-- Parts of stomach 
+- Intraperitoneal
+- Structures
 
   - **Cardia**: surrounding **cardinal orifice**
   - **Fundus**: superior part, have **cardial notch**
@@ -273,18 +274,186 @@ Large Intestine
 Spleen 
 ^^^^^^
 
+- Intraperitoneal
+- Structures
+
+  - Anterior: stomach / medial: kidney
+  - **Fibrous capsule**
+  - **Trabeculae**
+  - **Splenic pulp**
+  - **Splenic hilum** 
+
+- Ligaments 
+
+  - Gastrosplenic ligament
+  - **Splenorenal ligament**
+
+- Arteries 
+
+  - **Splenic artery**
+
+- Veins 
+
+  - **Splenic vein**
+
+- Lymphatics
+
+  - **Pancreaticosplenic lymph nodes** (celiac lymph nodes)
+
+- Nerves: celiac plexus 
+
 Pancreas 
 ^^^^^^^^
+
+- Retroperitoneal
+- Structures 
+
+  - **Head**: Embraced by duodenum
+
+    - **Uncinate process**: posterior to SMA 
+
+  - **Neck**: anterior to SMA and SMV
+  - **Body**: posterior to stomach 
+  - **Tail**: medial to spleen 
+  - **Main pancreatic duct**: enters major duodenal papilla 
+
+    - **Hepatopancreatic ampulla**: bile duct and main pancreatic duct unite 
+    - Sphincters: of pancreatic duct, of bile duct, of Oddi
+
+  - **Accessory pancreatic duct**: enters minor duodenal papilla 
+
+- Arteries 
+
+  - Celiac trunk / splenic artery 
+
+    - **Pancreatic arteries**: body and tail 
+
+  - Celiac trunk / common hepatic artery 
+
+    - Anterior / posterior superior pancreaticoduodenal artery: head 
+
+  - Superior mesenteric artery 
+
+    - Anterior / posterior inferior pancreaticoduodenal artery: head 
+
+- Veins 
+
+  - Pancreatic vein (splenic vein)
+
+- Lymphatics 
+
+  - Pancreaticosplenic lymph nodes (celiac lymph nodes)
+
+- Nerves: celiac / superior mesenteric plexus 
+
+  - Vagus nerve 
+  - Thoracic splanchnic nerve 
 
 Liver 
 ^^^^^
 
+- Intraperitoneal
+- **Diaphragmatic surface**
+
+  - Divided by faciform ligament 
+  - **Bare area**: not covered by peritoneum 
+      
+    - Surrounded by **anterior / posterior coronary ligament**
+    - Converge to **left / right triangle ligament**
+    
+  - **Subphrenic recess**: face diaphragm
+
+- **Visceral surface** 
+
+  - Transverse fissure: **Porta hepatis**
+  - **Right sagittal fissure**
+
+    - Anterior: gallbladder
+    - Posterior: vena cava 
+
+  - **Left sagittal fissure**
+
+    - Anterior: **round ligament** (from umbilical vein)
+    - Posterior: **ligamentum venosum** (from ductus venosus)
+
+  - Contact with: stomach, duodenum, gallbladder, transverse colon, right kidney and suprarenal gland 
+  - Lesser omentum: enclose portal triad and form hepatoduodenal ligament 
+  - **Portal triad**: bile duct, hepatic arery, hepatic portal vein 
+  - **Hepatorenal recess**: face right kidney
+
+- Lobes 
+
+  - **Right lobe**: right to faciform ligament / right sigittal fissure 
+  - **Left lobe**: left to faciform ligament / left sagittal fissure 
+  - **Caudate lobe**: between vena cava and ligamentum venosum
+  - **Quadrate lobe**: between gallbladder and round ligament 
+  - Hepatic segments: **segments I - VIII**, each supplied by own triad 
+
+- Vasculature 
+
+  - **Hepatic portal vein**: from alimentary tract 
+  
+    - 75% of blood 
+
+  - **Hepatic artery**: from celiac trunk / **common hepatic artery** / **hepatic artery proper**
+
+    - 25% of blood 
+    
+  - **Hepatic vein**: to IVC 
+  
+    - Right, intermediate, and left hepatic veins 
+    - Intersegmental 
+
+- Lymphatics
+
+  - Superficial lymphatics: in **fibrous capsule**
+  - Deep lymphatics: in **perisinudoidal space** and to **intralobular portal triads**
+  - **Hepatic lymph nodes**
+  - **Phrenic lymph nodes**
+
+- Nerves 
+
+  - **Hepatic plexus** (from celiac plexus)
+
 Biliary Duct and Gallbladder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- **Gallbladder**
+
+  - **Fundus** 
+  - **Body**
+  - **Neck** 
+  - **Cystic duct**: has **Spiral fold**
+
+- **Bile duct**
+
+  - Union of cystic duct and common hepatic duct 
+  - Join main pancreatic duct 
+
+- Arteries 
+
+  - **Cystic artery**: from right hepatic artery 
+
+    - In **cystohepatic triangle (of Calot)** (common hepatic duct, cystic duct, visceral surface of liver)
+
+- Veins
+
+  - **Cystic vein**: to liver 
+
+- Lymphatics:
+
+  - Cystic lymph node (celiac lymph nodes)
+
+- Nerves 
+
+  - From ciliac plexus 
+  - Right phrenic nerve: pain 
 
 Kidney, Ureters, and Suprarenal Glands
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Summary of Neurovasculature
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Diaphragm 
 ---------

@@ -36,11 +36,12 @@ Esophagus (Abdominal Part)
   
 - Lymphatics
 
-  - Celiac lymph nodes 
+  - Left gastric lymph nodes (celiac lymph nodes) 
 
-- Nerves: 
+- Nerves: **esophageal plexus**
   
-  - Esophageal plexus**: from vagas nerve and greater splanchnic nerve 
+  - Vagas nerve (parasympathetic)
+  - Greater splanchnic nerve (sympathetic)
 
 Stomach 
 ^^^^^^^
@@ -99,17 +100,175 @@ Stomach
     - **Gastric lymph nodes**
     - **Gastro-omental lymph nodes**
 
-- Nerves 
+- Nerves: celiac plexus 
 
-  - Anterior vagal trunk
-  - Posterior vagal trunk
-  - Greater splanchnic nerve 
+  - Vagus nerve (parasympathetic)
+  - Greater splanchnic nerve (sympathetic)
 
 Small Intestine 
 ^^^^^^^^^^^^^^^
 
+- **Duodenum**
+
+  - **Superior part**: L1 
+
+    - Proximal: intraperitoneal (**ampulla**) / Distal: retroperitoneal
+    - Hepatoduodenal ligement attaches
+
+  - **Descending part**: L1 - L3 
+
+    - Retroperitoneal
+    - **Major duodenal papilla**: hepatopancreatic ampulla enters 
+
+  - **Inferior part**: L3 
+
+    - Retroperitoneal
+    - Crossed by superior mesenteric artery and vein 
+
+  - **Ascending part**: L3 - L2
+    
+    - Retroperitoneal
+    - **Duodenojejunal flexure**: supported by suspensory muscle 
+    - **Suspensory muscle of duodenum** (ligament of Treitz): from diaphragm
+
+- **Jejunum**
+
+  - Intraperitoneal
+  - Wall: thick
+  - **Arterial arcades**: few loops 
+  - **Vasa recta**: long
+  - Lymphoid nodules: few 
+
+- **Ileum**
+
+  - Intraperitoneal
+  - Wall: thin
+  - **Arterial arcades**: more loops 
+  - **Vasa recta**: shoerter 
+  - Lymphoid nodules: many
+  - **Ileocecal junction**: **ileal orifice and papilla**, **ileocolic lips (valves)**
+
+- Arteries
+
+  - Celiac trunk: foregut 
+
+    - **Superior pancreaticoduodenal artery**: duodenum above entry of bile duct
+
+  - Superior mesenteric artery: midgut 
+
+    - **Inferior pancreaticoduodenal artery**: duodenum below entry of bile duct
+    - **Jujunal artery**: jejunum
+    - **Ilean artery**: ileum 
+
+- Veins
+
+  - Hepatic portal vein: duodenum 
+  - Superior mesenteric vein: jejunum and ileum
+
+- Lymphatics 
+
+  - Superior mesenteric lymph nodes 
+
+    - Pancreaticoduodenal lymph nodes
+    - Juxta-intestinal lymph nodes (from **lacteals**)
+    - Mesenteric lymph nodes 
+    - Superior central nodes 
+    - Ileocolic lymph nodes 
+
+- Nerves: **superior mesenteric plexus**
+
+  - Vagus nerve (parasympathetic)
+  - Greater / lesser / least splanchnic nerves (sympathetic)
+
 Large Intestine
 ^^^^^^^^^^^^^^^
+
+- Features 
+
+  - **Omental appendices**
+  - **Taniae coli**: begin at appendix 
+  - **Haustra** 
+
+- **Cecum**
+
+  - Intraperitoneal
+  - **Appendix**: has **meso-appendix**
+
+- **Ascending colon**
+
+  - Retroperitoneal
+  - **Right coloc flexure**
+
+- **Transverse colon** 
+
+  - Intraperitoneal (Transverse mesocolon)
+  - **Left colic flexure**: phrenicocolic ligament attaches 
+
+- **Descending colon**
+
+  - Retroperitoneal
+
+- **Sigmoid colon**
+
+  - Intraperitoneal (**Sigmoid mesocolon**)
+
+- Arteries: form **marginal artery**
+
+  - Superior mesenteric artery: midgut 
+
+    - **Ileocolic / appendicular artery**: cecum 
+    - **Right coloc artery**: ascending colon 
+    - **Middle colic artery**: transverse colon 
+
+  - Inferiro mesenteric artery: hindgut 
+
+    - **Left colic artery**: descending colon 
+    - **Sigmoid artery**: sigmoid colon 
+
+- Veins 
+
+  - Superior mesenteric vein 
+
+    - **Ileocolic vein**: cecum 
+    - **Right colic vein**: ascending colon 
+    - **Middle colic vein**: transverse colon 
+
+  - Inferior mesenteric vein 
+
+    - **Left colic vein**: descending colon 
+    - **Sigmoid vein**: sigmoid colon 
+    
+- Lymphatics: 
+
+  - Levels: 
+
+    - Epicolic lymph nodes 
+    - Paracolic lymph nodes 
+    - Intermediate colic lymph nodes 
+    - Principle colic lymph nodes 
+
+  - Superior mesenteric lymph nodes 
+
+    - Ileocolic lymph nodes 
+    - Right colic lymph nodes 
+    - Middle colic lymph nodes 
+  
+  - Inferior mesenteric lymph nodes 
+
+    - Left colic lymph nodes 
+    - Sigmoid lymph nodes 
+
+- Nerves: 
+
+  - Superior mesenteric plexus: proximal to left coloc flexure
+
+    - Vagus nerve (parasympathetic)
+    - Thoracic splanchnic nerve (sympathetic)
+
+  - Inferior mesenteric plexus: distal to left coloc flexure
+
+    - Pelvic splanchnic nerve (parasympathetic)
+    - Lumbar splanchnic nerve (sympathetic)
 
 Spleen 
 ^^^^^^

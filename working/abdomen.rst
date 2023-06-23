@@ -420,6 +420,7 @@ Biliary Duct and Gallbladder
 
 - **Gallbladder**
 
+  - Intraperitoneal
   - **Fundus** 
   - **Body**
   - **Neck** 
@@ -452,8 +453,121 @@ Biliary Duct and Gallbladder
 Kidney, Ureters, and Suprarenal Glands
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Summary of Neurovasculature
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- **Kidney**
+
+  - Retroperitoneal
+  - Position: T12 - L3 
+  - **Renal hilum**
+
+    - Entrance to **renal sinus**
+    - At transpyloric plane (L1)
+    - Anterior to posterior: renal vein / artery / pelvis 
+
+  - **Renal pelvis**
+
+    - From **major calyx** / **minor calyx** / **renal papilla** / renal pyramid 
+    - To ureter 
+
+- **Ureter** (abdominal part)
+
+  - Constriction
+
+    - Renal pelvis 
+    - Brim of pelvic inlet 
+    - Urinary bladder 
+
+- **Suprarental gland**
+
+  - **Suprarenal cortex**
+  - **Suprarenal medulla**
+
+- Arteries 
+
+  - **Renal artery**: from aorta 
+
+    - **Superior segmental artery**
+    - **Antero-superior segmental artery**
+    - **Antero-inferior segmental artery**
+    - **Inferior segmental artery**
+    - **Posterior segmental artery**
+
+  - **Suprarenal artery**
+
+    - **Superior suprarenal artery**: from inferior phrenic artery
+    - **Middle suprarenal artery**: from abdominal aorta
+    - **Inferior suprarenal artery**: from renal artery
+
+- Veins 
+
+  - **Renal vein**: to IVC
+
+    - **Right renal artery**
+    - **Left renal artery**: receive suprarenal vein and gonadal vein
+
+  - **Suprarenal vein**
+
+    - **Right suprarenal vein**: to IVC
+    - **Left suprarenal vein**: to renal vein
+
+- Lymphatics
+
+  - Lumbar lymph nodes 
+
+- Nerves
+
+  - Thoracic splanchnic nerve (sympathetic)
+
+Summary of Innervation
+^^^^^^^^^^^^^^^^^^^^^^
+
+- Sympathetic innrevation (presynaptic)
+
+  - **Greater splanchnic nerve**: T5 - T9
+  - **Lesser splanchnic nerve**: T10 - T11
+  - **Least splanchnic nerve**: T12
+  - **Lumbar splanchnic nerve**: L1 - L2
+
+- Parasympathetic innervation (presynaptic)
+
+  - Vagus nerve: CN10 
+  - **Pelvic splanchnic nerve**: S2 - S4 
+
+- Extrincis autonomic plexus 
+
+  - **Celiac plexus**: **celiac ganglion**  
+
+    - Parasympathetic: vagus nerve 
+    - Sympathetic: greater splanchnic nerve 
+
+  - **Superior mesenteric plexus**: superior mesenteric ganglion
+
+    - Parasympathetic: celiac plexus 
+    - Sympathetic: lesser splanchnic nerve 
+
+  - Renal plexus: aorticorenal ganglion 
+
+    - Sympathetic: least splanchnic nerve 
+
+  - **Intermesenteric plexus**
+  - **Superior hypogastric plexus**
+
+    - Sympathetic: lumbar splanchnic nerve 
+
+  - **Inferior hypogastric plexus**
+
+    - Parasympathetic: pelvic splanchnic nerve 
+    - Sympathetic: hypogastric nerve (from superior hypogastric plexus)
+
+- Intrinsic autonomic plexus (**Enteric nervous system**)
+
+  - Presynaptic parasympathetic and sympathetic fiber 
+  - **Myenteric plexus** (of Auerbach): motility 
+  - **Submucosal plexus** (of Meissner): secretion 
+  
+- Visceral sensory innervation 
+
+  - Pain sensation: sympathetic fibers 
+  - Reflex sensation: parasympathetic fibers 
 
 Diaphragm 
 ---------

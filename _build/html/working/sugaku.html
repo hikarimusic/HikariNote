@@ -39,6 +39,7 @@
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Abdomen" href="abdomen.html" />
     <link rel="prev" title="Data Structure (Advanced)" href="data_structure_advanced.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en">
@@ -173,6 +174,11 @@
    数学
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="abdomen.html">
+   Abdomen
+  </a>
+ </li>
 </ul>
 
   </div>
@@ -199,16 +205,55 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
-   積分法
+   極限
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id3">
-     不定積分
+     数列の極限
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id4">
+     無限級数
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     関数の極限
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   微分法
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     導関数
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     様々な導関数
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id9">
+   積分法
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     不定積分
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
      定積分
     </a>
    </li>
@@ -236,9 +281,141 @@
   <section id="id1">
 <h1>数学<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <section id="id2">
-<h2>積分法<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<h2>極限<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
 <section id="id3">
-<h3>不定積分<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<h3>数列の極限<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>極限の基本</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\lim_{n\to\infty}ka_n=k\alpha\quad\lim_{n\to\infty}(a_n+b_n)=\alpha+\beta\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{n\to\infty}a_n b_n=\alpha\beta\quad\lim_{n\to\infty}\frac{a_n}{b_n}=\frac{\alpha}{\beta}\;(\beta\neq0)\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>はさみうちの原理</strong></p>
+<ul>
+<li><p>すべての <span class="math notranslate nohighlight">\(n\)</span> で <span class="math notranslate nohighlight">\(a_n\leq b_n\)</span>： <span class="math notranslate nohighlight">\(\alpha\leq\beta\)</span></p></li>
+<li><p>すべての <span class="math notranslate nohighlight">\(n\)</span> で <span class="math notranslate nohighlight">\(a_n\leq c_n\leq b_n\)</span> かつ <span class="math notranslate nohighlight">\(\alpha=\beta\)</span>： <span class="math notranslate nohighlight">\(\lim_{n\to\infty}c_n=\alpha\)</span></p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{n^k}\)</span> <strong>の極限</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(k&gt;0\)</span> ： <span class="math notranslate nohighlight">\(\lim_{n\to\infty}n^k=\infty\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(k&lt;0\)</span> ： <span class="math notranslate nohighlight">\(\lim_{n\to\infty}n^k=0\)</span></p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{r^n}\)</span> <strong>の極限</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(r&gt;1\)</span> ： <span class="math notranslate nohighlight">\(\lim_{n\to\infty}r^n=\infty\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(r=1\)</span> ： <span class="math notranslate nohighlight">\(\lim_{n\to\infty}r^n=1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(-1&lt;r&lt;1\)</span> ： <span class="math notranslate nohighlight">\(\lim_{n\to\infty}r^n=0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(r\leq-1\)</span> ：極限がない</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id4">
+<h3>無限級数<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>定義</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(S_n=\sum_{k=1}^n a_k\)</span> が <span class="math notranslate nohighlight">\(S\)</span> に収束：無限級数が <span class="math notranslate nohighlight">\(S\)</span> 収束</p></li>
+<li><p><span class="math notranslate nohighlight">\(S_n=\sum_{k=1}^n a_k\)</span> が発散：無限級数が発散</p></li>
+</ul>
+</li>
+<li><p><strong>収束・発散</strong></p>
+<ul>
+<li><p>無限級数 <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty a_n\)</span> が収束： <span class="math notranslate nohighlight">\(\lim_{n\to\infty}a_n=0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{n\to\infty}a_n\neq0\)</span> ：無限級数 <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty a_n\)</span> が発散</p></li>
+</ul>
+</li>
+<li><p><strong>無限等比級数</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(a\neq0,\;|r|&lt;1\)</span> ：収束、和は <span class="math notranslate nohighlight">\(\frac{a}{1-r}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a\neq0,\;|r|\geq1\)</span> ：発散</p></li>
+<li><p><span class="math notranslate nohighlight">\(a=0\)</span> ：収束、和は <span class="math notranslate nohighlight">\(0\)</span></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id5">
+<h3>関数の極限<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>極限の基本</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\to a}kf(x)=k\alpha\quad\lim_{x\to a}\left\{f(x)+g(x)\right\}=\alpha+\beta\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\to a}f(x)g(x)=\alpha\beta\quad\lim_{x\to a}\frac{f(x)}{g(x)}=\frac{\alpha}{\beta}\;(\beta\neq0)\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>はさみうちの原理</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(x\)</span> が <span class="math notranslate nohighlight">\(a\)</span> に近い時 <span class="math notranslate nohighlight">\(f(x)\leq g(x)\)</span>： <span class="math notranslate nohighlight">\(\alpha\leq\beta\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x\)</span> が <span class="math notranslate nohighlight">\(a\)</span> に近い時 <span class="math notranslate nohighlight">\(f(x)\leq h(x)\leq g(x)\)</span> かつ <span class="math notranslate nohighlight">\(\alpha=\beta\)</span>： <span class="math notranslate nohighlight">\(\lim_{x\to a}h(x)=\alpha\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>様々な極限</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\to\infty}a^x=\infty\quad\lim_{x\to -\infty}a^x=0\)</span> ( <span class="math notranslate nohighlight">\(a&gt;1\)</span> )</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\to\infty}a^x=0\quad\lim_{x\to -\infty}a^x=\infty\)</span> ( <span class="math notranslate nohighlight">\(0&lt;a&lt;1\)</span> )</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\to\infty}\log_a x=\infty\quad\lim_{x\to +0}a^x=-\infty\)</span> ( <span class="math notranslate nohighlight">\(a&gt;1\)</span> )</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\to\infty}\log_a x=-\infty\quad\lim_{x\to +0}\log_a x=\infty\)</span> ( <span class="math notranslate nohighlight">\(0&lt;a&lt;1\)</span> )</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\to 0}\frac{\sin x}{x}=1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{h\to 0}(1+h)^{\frac{1}{h}}=e\quad\lim_{h\to 0}\frac{e^h-1}{h}=e\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>連続性と中間値の定理</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(f(x)\)</span> が <span class="math notranslate nohighlight">\(x=a\)</span> で連続： <span class="math notranslate nohighlight">\(\lim_{x\to a}f(x)=f(a)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x)\)</span> が区間 <span class="math notranslate nohighlight">\([a, b]\)</span> で連続、 <span class="math notranslate nohighlight">\(f(a)\neq f(b)\)</span> ： <span class="math notranslate nohighlight">\(f(a)\)</span> と <span class="math notranslate nohighlight">\(f(b)\)</span> の間の <span class="math notranslate nohighlight">\(k\)</span> に対して <span class="math notranslate nohighlight">\(f(c)=k,\;a&lt;c&lt;b\)</span> を満たす <span class="math notranslate nohighlight">\(c\)</span> が存在する</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="id6">
+<h2>微分法<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
+<section id="id7">
+<h3>導関数<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>定義</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>公式</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\((x^\alpha)'=\alpha x^{\alpha-1}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\left\{kf(x)\right\}'=kf'(x)\quad\left\{f(x)+g(x)\right\}'=f'(x)+g'(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\left\{f(x)g(x)\right\}'=f'(x)g(x)+f(x)g'(x)\quad\left\{\frac{f(x)}{g(x)}\right\}'=\frac{f'(x)g(x)-f(x)g'(x)}{{g(x)}^2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{dy}{dx}=\frac{1}{\frac{dx}{dy}}\)</span></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id8">
+<h3>様々な導関数<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>様々な導関数</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\((\sin x)'=\cos x'\quad (\cos x)'=-\sin x\quad (\tan x)'=\frac{1}{\cos^2 x}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((\log|x|)'=\frac{1}{x}\quad (\log_a|x|)'=\frac{1}{x\log a}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((e^x)'=e^x\quad (a^x)'=a^x\log a\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>その他</strong></p>
+<ul>
+<li><p>高次導関数： <span class="math notranslate nohighlight">\(f^{(n)}(x)=\frac{d^n}{dx^n}f(x)\)</span></p></li>
+<li><p>陰関数の微分： <span class="math notranslate nohighlight">\(F(x, y)=0\)</span> の両辺を <span class="math notranslate nohighlight">\(x\)</span> で微分する、 <span class="math notranslate nohighlight">\(\frac{df(y)}{dx}=\frac{df(y)}{dy}\frac{dy}{dx}\)</span></p></li>
+<li><p>媒介変数の微分： <span class="math notranslate nohighlight">\(\frac{dy}{dx}=\frac{\frac{dy}{dt}}{\frac{dx}{dt}}\)</span></p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="id9">
+<h2>積分法<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
+<section id="id10">
+<h3>不定積分<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>基本的な積分</strong></p>
 <ul>
@@ -280,8 +457,8 @@
 </li>
 </ul>
 </section>
-<section id="id4">
-<h3>定積分<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<section id="id11">
+<h3>定積分<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>偶関数・奇関数の積分</strong></p>
 <ul>
@@ -325,6 +502,13 @@
           <p class="prev-next-subtitle">previous</p>
           <p class="prev-next-title">Data Structure (Advanced)</p>
       </div>
+  </a>
+  <a class='right-next' id="next-link" href="abdomen.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Abdomen</p>
+  </div>
+  <i class="fas fa-angle-right"></i>
   </a>
 </div>
               </footer>

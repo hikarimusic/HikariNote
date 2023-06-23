@@ -152,6 +152,12 @@ AVL Tree
 
         working
 
+Splay Tree 
+----------
+
+B-Tree 
+------
+
 Red-Black Tree
 --------------
 
@@ -618,3 +624,99 @@ Fenwick Tree
     .. code-tab:: c++
 
         working
+
+Trie 
+----
+
+:insert: :math:`O(S)`
+:delete: :math:`O(S)`
+:search: :math:`O(S)`
+
+.. tabs::
+
+    .. code-tab:: python
+
+        class Node:
+            def __init__(self, alphabet):
+                self.child = [None for i in range(alphabet)]
+                self.word = False 
+
+        class Trie:
+            def __init__(self, alphabet):
+                self.alphabet = alphabet
+                self.root = Node(self.alphabet)
+            
+            def insert(self, word):
+                x = self.root
+                for c in word:
+                    if not x.child[ord(c)-ord('a')]:
+                        x.child[ord(c)-ord('a')] = Node(self.alphabet)
+                    x = x.child[ord(c)-ord('a')]
+                x.word = True
+            
+            def delete(self, word):
+                brn = self.root 
+                brc = word[0]
+                x = self.root
+                for c in word:
+                    if not x.child[ord(c)-ord('a')]:
+                        return
+                    cnt = 0
+                    for i in range(self.alphabet):
+                        if x.child[i]:
+                            cnt += 1
+                    if cnt > 1:
+                        brn = x
+                        brc = c
+                    x = x.child[ord(c)-ord('a')]
+                cnt = 0
+                for i in range(self.alphabet):
+                    if x.child[i]:
+                        cnt += 1
+                if x.word == False:
+                    return 
+                if cnt == 0:
+                    brn.child[ord(brc)-ord('a')] = None 
+                else:
+                    x.word = False 
+            
+            def search(self, word):
+                x = self.root
+                for c in word:
+                    if not x.child[ord(c)-ord('a')]:
+                        return
+                    x = x.child[ord(c)-ord('a')]
+                if x.word == False:
+                    return False
+                return True
+
+        if __name__ == '__main__':
+            tree = Trie(26)
+            tree.insert("glucose")
+            tree.insert("gluconeogenesis")
+            tree.insert("glycolysis")
+            tree.delete("glucose")
+            tree.insert("glycogen")
+            tree.insert("glycogenesis")
+            tree.insert("glycogenolysis")
+            tree.delete("glycogen")
+            tree.insert("galactose")
+            tree.insert("fructose")
+            tree.insert("ribose")
+            tree.insert("ribulose")
+            print(tree.search("glucose"))
+            print(tree.search("glycolysis"))
+            print(tree.search("ribose"))
+
+    .. code-tab:: c++
+
+        working
+
+Suffix Tree 
+-----------
+
+K-Dimensional Tree
+------------------
+
+Disjoint Set 
+------------

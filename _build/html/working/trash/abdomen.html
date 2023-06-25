@@ -1,0 +1,1040 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Abdomen &#8212; HikariNote  documentation</title>
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
+
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/code-tabs.css" />
+
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/code-tabs.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
+
+    
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
+
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    <img src="../../_static/banner.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../_static/banner.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="fas fa-bars"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../medicine/index.html">
+  <strong>
+   Medicine
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../information/index.html">
+  <strong>
+   Information
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../others/index.html">
+  <strong>
+   Others
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../index.html">
+  <strong>
+   Working
+  </strong>
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/hikarimusic/HikariNote" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
+          
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
+
+          
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#anterolateral-abdominal-wall">
+   Anterolateral Abdominal Wall
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#peritoneum">
+   Peritoneum
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abdominal-viscera">
+   Abdominal Viscera
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#esophagus-abdominal-part">
+     Esophagus (Abdominal Part)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stomach">
+     Stomach
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#small-intestine">
+     Small Intestine
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#large-intestine">
+     Large Intestine
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spleen">
+     Spleen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pancreas">
+     Pancreas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#liver">
+     Liver
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#biliary-duct-and-gallbladder">
+     Biliary Duct and Gallbladder
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kidney-ureters-and-suprarenal-glands">
+     Kidney, Ureters, and Suprarenal Glands
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary-of-innervation">
+     Summary of Innervation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diaphragm">
+   Diaphragm
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#posterior-abdominal-wall">
+   Posterior Abdominal Wall
+  </a>
+ </li>
+</ul>
+
+</nav>
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
+
+          
+          
+          <div class="bd-content col-12 col-md-9 col-xl-7">
+              
+              <article class="bd-article" role="main">
+                
+  <section id="abdomen">
+<h1>Abdomen<a class="headerlink" href="#abdomen" title="Permalink to this heading">#</a></h1>
+<section id="anterolateral-abdominal-wall">
+<h2>Anterolateral Abdominal Wall<a class="headerlink" href="#anterolateral-abdominal-wall" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="peritoneum">
+<h2>Peritoneum<a class="headerlink" href="#peritoneum" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="abdominal-viscera">
+<h2>Abdominal Viscera<a class="headerlink" href="#abdominal-viscera" title="Permalink to this heading">#</a></h2>
+<section id="esophagus-abdominal-part">
+<h3>Esophagus (Abdominal Part)<a class="headerlink" href="#esophagus-abdominal-part" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Constriction</p>
+<ul>
+<li><p><strong>Cervical constriction</strong>: by crocopharygeus muscle</p></li>
+<li><p><strong>Thoracic constriction</strong>: by arch of aorta and left main bronchus</p></li>
+<li><p><strong>Diaphragmatic constriction</strong>: by esophageal hiatus of diaphragm</p></li>
+</ul>
+</li>
+<li><p>Pathway</p>
+<ul>
+<li><p>Esophageal hiatus: attached by <strong>Phrenico-esophageal ligament</strong> (T10)</p></li>
+<li><p><strong>Esophagogastric junction</strong>: by <strong>Z-line</strong> (T11)</p></li>
+</ul>
+</li>
+<li><p>Arteries</p>
+<ul>
+<li><p>Left gastric artery</p></li>
+<li><p>Left inferior phrenic artery</p></li>
+</ul>
+</li>
+<li><p>Veins</p>
+<ul>
+<li><p>Left gastric vein (portal venous system)</p></li>
+<li><p>Esophageal veins (systemic venous system)</p></li>
+</ul>
+</li>
+<li><p>Lymphatics</p>
+<ul>
+<li><p>Left gastric lymph nodes (celiac lymph nodes)</p></li>
+</ul>
+</li>
+<li><p>Nerves: <strong>esophageal plexus</strong></p>
+<ul>
+<li><p>Vagas nerve (parasympathetic)</p></li>
+<li><p>Greater splanchnic nerve (sympathetic)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="stomach">
+<h3>Stomach<a class="headerlink" href="#stomach" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Intraperitoneal</p></li>
+<li><p>Structures</p>
+<ul>
+<li><p><strong>Cardia</strong>: surrounding <strong>cardinal orifice</strong></p></li>
+<li><p><strong>Fundus</strong>: superior part, have <strong>cardial notch</strong></p></li>
+<li><p><strong>Body</strong>: major part</p></li>
+<li><p><strong>Pyloric part</strong>:</p>
+<ul>
+<li><p><strong>Pyloric antrum</strong> and <strong>pyloric canal</strong></p></li>
+<li><p><strong>Pylorus</strong>: sphincters control <strong>pyloric orifice</strong></p></li>
+<li><p>At <strong>transpyloric plane</strong> (L1)</p></li>
+</ul>
+</li>
+<li><p><strong>Lesser curvature</strong>: shorter concave</p></li>
+<li><p><strong>Greater curvature</strong>: longer concave</p></li>
+<li><p>Interior: <strong>gastric folds</strong> and <strong>gastric canal</strong></p></li>
+</ul>
+</li>
+<li><p>Arteries</p>
+<ul>
+<li><p>Celiac trunk / left gastric artery</p>
+<ul>
+<li><p><strong>Left gastric artery</strong>: lesser curvature</p></li>
+</ul>
+</li>
+<li><p>Celiac trunk / splenic artery</p>
+<ul>
+<li><p><strong>Short gastric artery</strong>: fundus</p></li>
+<li><p><strong>Left gastro-omental artery</strong>: greater curvature</p></li>
+</ul>
+</li>
+<li><p>Celiac trunk / common hepatic artery</p>
+<ul>
+<li><p><strong>Right gastric artery</strong>: lesser curvature</p></li>
+<li><p><strong>Right gastro-omental artery</strong>: greater curvature</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Veins</p>
+<ul>
+<li><p>Hepatic portal vein</p>
+<ul>
+<li><p><strong>Right gastric vein</strong></p></li>
+<li><p><strong>Left gastric vein</strong></p></li>
+</ul>
+</li>
+<li><p>Splenic vein</p>
+<ul>
+<li><p><strong>Short gastric vein</strong></p></li>
+<li><p><strong>Left gastro-omental vein</strong></p></li>
+</ul>
+</li>
+<li><p>Superior mesenteric vein</p>
+<ul>
+<li><p><strong>Right gastro-omental vein</strong></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Lymphatics</p>
+<ul>
+<li><p>Celiac lymph nodes</p>
+<ul>
+<li><p><strong>Gastric lymph nodes</strong></p></li>
+<li><p><strong>Gastro-omental lymph nodes</strong></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Nerves: celiac plexus</p>
+<ul>
+<li><p>Vagus nerve (parasympathetic)</p></li>
+<li><p>Greater splanchnic nerve (sympathetic)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="small-intestine">
+<h3>Small Intestine<a class="headerlink" href="#small-intestine" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Duodenum</strong></p>
+<ul>
+<li><p><strong>Superior part</strong>: L1</p>
+<ul>
+<li><p>Proximal: intraperitoneal (<strong>ampulla</strong>) / Distal: retroperitoneal</p></li>
+<li><p>Hepatoduodenal ligement attaches</p></li>
+</ul>
+</li>
+<li><p><strong>Descending part</strong>: L1 - L3</p>
+<ul>
+<li><p>Retroperitoneal</p></li>
+<li><p><strong>Major duodenal papilla</strong>: hepatopancreatic ampulla enters</p></li>
+</ul>
+</li>
+<li><p><strong>Inferior part</strong>: L3</p>
+<ul>
+<li><p>Retroperitoneal</p></li>
+<li><p>Crossed by superior mesenteric artery and vein</p></li>
+</ul>
+</li>
+<li><p><strong>Ascending part</strong>: L3 - L2</p>
+<ul>
+<li><p>Retroperitoneal</p></li>
+<li><p><strong>Duodenojejunal flexure</strong>: supported by suspensory muscle</p></li>
+<li><p><strong>Suspensory muscle of duodenum</strong> (ligament of Treitz): from diaphragm</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Jejunum</strong></p>
+<ul>
+<li><p>Intraperitoneal</p></li>
+<li><p>Wall: thick</p></li>
+<li><p><strong>Arterial arcades</strong>: few loops</p></li>
+<li><p><strong>Vasa recta</strong>: long</p></li>
+<li><p>Lymphoid nodules: few</p></li>
+</ul>
+</li>
+<li><p><strong>Ileum</strong></p>
+<ul>
+<li><p>Intraperitoneal</p></li>
+<li><p>Wall: thin</p></li>
+<li><p><strong>Arterial arcades</strong>: more loops</p></li>
+<li><p><strong>Vasa recta</strong>: shoerter</p></li>
+<li><p>Lymphoid nodules: many</p></li>
+<li><p><strong>Ileocecal junction</strong>: <strong>ileal orifice and papilla</strong>, <strong>ileocolic lips (valves)</strong></p></li>
+</ul>
+</li>
+<li><p>Arteries</p>
+<ul>
+<li><p>Celiac trunk: foregut</p>
+<ul>
+<li><p><strong>Superior pancreaticoduodenal artery</strong>: duodenum above entry of bile duct</p></li>
+</ul>
+</li>
+<li><p>Superior mesenteric artery: midgut</p>
+<ul>
+<li><p><strong>Inferior pancreaticoduodenal artery</strong>: duodenum below entry of bile duct</p></li>
+<li><p><strong>Jujunal artery</strong>: jejunum</p></li>
+<li><p><strong>Ilean artery</strong>: ileum</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Veins</p>
+<ul>
+<li><p>Hepatic portal vein: duodenum</p></li>
+<li><p>Superior mesenteric vein: jejunum and ileum</p></li>
+</ul>
+</li>
+<li><p>Lymphatics</p>
+<ul>
+<li><p>Superior mesenteric lymph nodes</p>
+<ul>
+<li><p>Pancreaticoduodenal lymph nodes</p></li>
+<li><p>Juxta-intestinal lymph nodes (from <strong>lacteals</strong>)</p></li>
+<li><p>Mesenteric lymph nodes</p></li>
+<li><p>Superior central nodes</p></li>
+<li><p>Ileocolic lymph nodes</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Nerves: <strong>superior mesenteric plexus</strong></p>
+<ul>
+<li><p>Vagus nerve (parasympathetic)</p></li>
+<li><p>Greater / lesser / least splanchnic nerves (sympathetic)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="large-intestine">
+<h3>Large Intestine<a class="headerlink" href="#large-intestine" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Features</p>
+<ul>
+<li><p><strong>Omental appendices</strong></p></li>
+<li><p><strong>Taniae coli</strong>: begin at appendix</p></li>
+<li><p><strong>Haustra</strong></p></li>
+</ul>
+</li>
+<li><p><strong>Cecum</strong></p>
+<ul>
+<li><p>Intraperitoneal</p></li>
+<li><p><strong>Appendix</strong>: has <strong>meso-appendix</strong></p></li>
+</ul>
+</li>
+<li><p><strong>Ascending colon</strong></p>
+<ul>
+<li><p>Retroperitoneal</p></li>
+<li><p><strong>Right coloc flexure</strong></p></li>
+</ul>
+</li>
+<li><p><strong>Transverse colon</strong></p>
+<ul>
+<li><p>Intraperitoneal (Transverse mesocolon)</p></li>
+<li><p><strong>Left colic flexure</strong>: phrenicocolic ligament attaches</p></li>
+</ul>
+</li>
+<li><p><strong>Descending colon</strong></p>
+<ul>
+<li><p>Retroperitoneal</p></li>
+</ul>
+</li>
+<li><p><strong>Sigmoid colon</strong></p>
+<ul>
+<li><p>Intraperitoneal (<strong>Sigmoid mesocolon</strong>)</p></li>
+</ul>
+</li>
+<li><p>Arteries: form <strong>marginal artery</strong></p>
+<ul>
+<li><p>Superior mesenteric artery: midgut</p>
+<ul>
+<li><p><strong>Ileocolic / appendicular artery</strong>: cecum</p></li>
+<li><p><strong>Right coloc artery</strong>: ascending colon</p></li>
+<li><p><strong>Middle colic artery</strong>: transverse colon</p></li>
+</ul>
+</li>
+<li><p>Inferiro mesenteric artery: hindgut</p>
+<ul>
+<li><p><strong>Left colic artery</strong>: descending colon</p></li>
+<li><p><strong>Sigmoid artery</strong>: sigmoid colon</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Veins</p>
+<ul>
+<li><p>Superior mesenteric vein</p>
+<ul>
+<li><p><strong>Ileocolic vein</strong>: cecum</p></li>
+<li><p><strong>Right colic vein</strong>: ascending colon</p></li>
+<li><p><strong>Middle colic vein</strong>: transverse colon</p></li>
+</ul>
+</li>
+<li><p>Inferior mesenteric vein</p>
+<ul>
+<li><p><strong>Left colic vein</strong>: descending colon</p></li>
+<li><p><strong>Sigmoid vein</strong>: sigmoid colon</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Lymphatics:</p>
+<ul>
+<li><p>Levels:</p>
+<ul>
+<li><p>Epicolic lymph nodes</p></li>
+<li><p>Paracolic lymph nodes</p></li>
+<li><p>Intermediate colic lymph nodes</p></li>
+<li><p>Principle colic lymph nodes</p></li>
+</ul>
+</li>
+<li><p>Superior mesenteric lymph nodes</p>
+<ul>
+<li><p>Ileocolic lymph nodes</p></li>
+<li><p>Right colic lymph nodes</p></li>
+<li><p>Middle colic lymph nodes</p></li>
+</ul>
+</li>
+<li><p>Inferior mesenteric lymph nodes</p>
+<ul>
+<li><p>Left colic lymph nodes</p></li>
+<li><p>Sigmoid lymph nodes</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Nerves:</p>
+<ul>
+<li><p>Superior mesenteric plexus: proximal to left coloc flexure</p>
+<ul>
+<li><p>Vagus nerve (parasympathetic)</p></li>
+<li><p>Thoracic splanchnic nerve (sympathetic)</p></li>
+</ul>
+</li>
+<li><p>Inferior mesenteric plexus: distal to left coloc flexure</p>
+<ul>
+<li><p>Pelvic splanchnic nerve (parasympathetic)</p></li>
+<li><p>Lumbar splanchnic nerve (sympathetic)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="spleen">
+<h3>Spleen<a class="headerlink" href="#spleen" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Intraperitoneal</p></li>
+<li><p>Structures</p>
+<ul>
+<li><p>Anterior: stomach / medial: kidney</p></li>
+<li><p><strong>Fibrous capsule</strong></p></li>
+<li><p><strong>Trabeculae</strong></p></li>
+<li><p><strong>Splenic pulp</strong></p></li>
+<li><p><strong>Splenic hilum</strong></p></li>
+</ul>
+</li>
+<li><p>Ligaments</p>
+<ul>
+<li><p>Gastrosplenic ligament</p></li>
+<li><p><strong>Splenorenal ligament</strong></p></li>
+</ul>
+</li>
+<li><p>Arteries</p>
+<ul>
+<li><p><strong>Splenic artery</strong></p></li>
+</ul>
+</li>
+<li><p>Veins</p>
+<ul>
+<li><p><strong>Splenic vein</strong></p></li>
+</ul>
+</li>
+<li><p>Lymphatics</p>
+<ul>
+<li><p><strong>Pancreaticosplenic lymph nodes</strong> (celiac lymph nodes)</p></li>
+</ul>
+</li>
+<li><p>Nerves: celiac plexus</p></li>
+</ul>
+</section>
+<section id="pancreas">
+<h3>Pancreas<a class="headerlink" href="#pancreas" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Retroperitoneal</p></li>
+<li><p>Structures</p>
+<ul>
+<li><p><strong>Head</strong>: Embraced by duodenum</p>
+<ul>
+<li><p><strong>Uncinate process</strong>: posterior to SMA</p></li>
+</ul>
+</li>
+<li><p><strong>Neck</strong>: anterior to SMA and SMV</p></li>
+<li><p><strong>Body</strong>: posterior to stomach</p></li>
+<li><p><strong>Tail</strong>: medial to spleen</p></li>
+<li><p><strong>Main pancreatic duct</strong>: enters major duodenal papilla</p>
+<ul>
+<li><p><strong>Hepatopancreatic ampulla</strong>: bile duct and main pancreatic duct unite</p></li>
+<li><p>Sphincters: of pancreatic duct, of bile duct, of Oddi</p></li>
+</ul>
+</li>
+<li><p><strong>Accessory pancreatic duct</strong>: enters minor duodenal papilla</p></li>
+</ul>
+</li>
+<li><p>Arteries</p>
+<ul>
+<li><p>Celiac trunk / splenic artery</p>
+<ul>
+<li><p><strong>Pancreatic arteries</strong>: body and tail</p></li>
+</ul>
+</li>
+<li><p>Celiac trunk / common hepatic artery</p>
+<ul>
+<li><p>Anterior / posterior superior pancreaticoduodenal artery: head</p></li>
+</ul>
+</li>
+<li><p>Superior mesenteric artery</p>
+<ul>
+<li><p>Anterior / posterior inferior pancreaticoduodenal artery: head</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Veins</p>
+<ul>
+<li><p>Pancreatic vein (splenic vein)</p></li>
+</ul>
+</li>
+<li><p>Lymphatics</p>
+<ul>
+<li><p>Pancreaticosplenic lymph nodes (celiac lymph nodes)</p></li>
+</ul>
+</li>
+<li><p>Nerves: celiac / superior mesenteric plexus</p>
+<ul>
+<li><p>Vagus nerve</p></li>
+<li><p>Thoracic splanchnic nerve</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="liver">
+<h3>Liver<a class="headerlink" href="#liver" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Intraperitoneal</p></li>
+<li><p><strong>Diaphragmatic surface</strong></p>
+<ul>
+<li><p>Divided by faciform ligament</p></li>
+<li><p><strong>Bare area</strong>: not covered by peritoneum</p>
+<ul>
+<li><p>Surrounded by <strong>anterior / posterior coronary ligament</strong></p></li>
+<li><p>Converge to <strong>left / right triangle ligament</strong></p></li>
+</ul>
+</li>
+<li><p><strong>Subphrenic recess</strong>: face diaphragm</p></li>
+</ul>
+</li>
+<li><p><strong>Visceral surface</strong></p>
+<ul>
+<li><p>Transverse fissure: <strong>Porta hepatis</strong></p></li>
+<li><p><strong>Right sagittal fissure</strong></p>
+<ul>
+<li><p>Anterior: gallbladder</p></li>
+<li><p>Posterior: vena cava</p></li>
+</ul>
+</li>
+<li><p><strong>Left sagittal fissure</strong></p>
+<ul>
+<li><p>Anterior: <strong>round ligament</strong> (from umbilical vein)</p></li>
+<li><p>Posterior: <strong>ligamentum venosum</strong> (from ductus venosus)</p></li>
+</ul>
+</li>
+<li><p>Contact with: stomach, duodenum, gallbladder, transverse colon, right kidney and suprarenal gland</p></li>
+<li><p>Lesser omentum: enclose portal triad and form hepatoduodenal ligament</p></li>
+<li><p><strong>Portal triad</strong>: bile duct, hepatic arery, hepatic portal vein</p></li>
+<li><p><strong>Hepatorenal recess</strong>: face right kidney</p></li>
+</ul>
+</li>
+<li><p>Lobes</p>
+<ul>
+<li><p><strong>Right lobe</strong>: right to faciform ligament / right sigittal fissure</p></li>
+<li><p><strong>Left lobe</strong>: left to faciform ligament / left sagittal fissure</p></li>
+<li><p><strong>Caudate lobe</strong>: between vena cava and ligamentum venosum</p></li>
+<li><p><strong>Quadrate lobe</strong>: between gallbladder and round ligament</p></li>
+<li><p>Hepatic segments: <strong>segments I - VIII</strong>, each supplied by own triad</p></li>
+</ul>
+</li>
+<li><p>Vasculature</p>
+<ul>
+<li><p><strong>Hepatic portal vein</strong>: from alimentary tract</p>
+<ul>
+<li><p>75% of blood</p></li>
+</ul>
+</li>
+<li><p><strong>Hepatic artery</strong>: from celiac trunk / <strong>common hepatic artery</strong> / <strong>hepatic artery proper</strong></p>
+<ul>
+<li><p>25% of blood</p></li>
+</ul>
+</li>
+<li><p><strong>Hepatic vein</strong>: to IVC</p>
+<ul>
+<li><p>Right, intermediate, and left hepatic veins</p></li>
+<li><p>Intersegmental</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Lymphatics</p>
+<ul>
+<li><p>Superficial lymphatics: in <strong>fibrous capsule</strong></p></li>
+<li><p>Deep lymphatics: in <strong>perisinudoidal space</strong> and to <strong>intralobular portal triads</strong></p></li>
+<li><p><strong>Hepatic lymph nodes</strong></p></li>
+<li><p><strong>Phrenic lymph nodes</strong></p></li>
+</ul>
+</li>
+<li><p>Nerves</p>
+<ul>
+<li><p><strong>Hepatic plexus</strong> (from celiac plexus)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="biliary-duct-and-gallbladder">
+<h3>Biliary Duct and Gallbladder<a class="headerlink" href="#biliary-duct-and-gallbladder" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Gallbladder</strong></p>
+<ul>
+<li><p>Intraperitoneal</p></li>
+<li><p><strong>Fundus</strong></p></li>
+<li><p><strong>Body</strong></p></li>
+<li><p><strong>Neck</strong></p></li>
+<li><p><strong>Cystic duct</strong>: has <strong>Spiral fold</strong></p></li>
+</ul>
+</li>
+<li><p><strong>Bile duct</strong></p>
+<ul>
+<li><p>Union of cystic duct and common hepatic duct</p></li>
+<li><p>Join main pancreatic duct</p></li>
+</ul>
+</li>
+<li><p>Arteries</p>
+<ul>
+<li><p><strong>Cystic artery</strong>: from right hepatic artery</p>
+<ul>
+<li><p>In <strong>cystohepatic triangle (of Calot)</strong> (common hepatic duct, cystic duct, visceral surface of liver)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Veins</p>
+<ul>
+<li><p><strong>Cystic vein</strong>: to liver</p></li>
+</ul>
+</li>
+<li><p>Lymphatics:</p>
+<ul>
+<li><p>Cystic lymph node (celiac lymph nodes)</p></li>
+</ul>
+</li>
+<li><p>Nerves</p>
+<ul>
+<li><p>From ciliac plexus</p></li>
+<li><p>Right phrenic nerve: pain</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="kidney-ureters-and-suprarenal-glands">
+<h3>Kidney, Ureters, and Suprarenal Glands<a class="headerlink" href="#kidney-ureters-and-suprarenal-glands" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Kidney</strong></p>
+<ul>
+<li><p>Retroperitoneal</p></li>
+<li><p>Position: T12 - L3</p></li>
+<li><p><strong>Renal hilum</strong></p>
+<ul>
+<li><p>Entrance to <strong>renal sinus</strong></p></li>
+<li><p>At transpyloric plane (L1)</p></li>
+<li><p>Anterior to posterior: renal vein / artery / pelvis</p></li>
+</ul>
+</li>
+<li><p><strong>Renal pelvis</strong></p>
+<ul>
+<li><p>From <strong>major calyx</strong> / <strong>minor calyx</strong> / <strong>renal papilla</strong> / renal pyramid</p></li>
+<li><p>To ureter</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Ureter</strong> (abdominal part)</p>
+<ul>
+<li><p>Constriction</p>
+<ul>
+<li><p>Renal pelvis</p></li>
+<li><p>Brim of pelvic inlet</p></li>
+<li><p>Urinary bladder</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Suprarental gland</strong></p>
+<ul>
+<li><p><strong>Suprarenal cortex</strong></p></li>
+<li><p><strong>Suprarenal medulla</strong></p></li>
+</ul>
+</li>
+<li><p>Arteries</p>
+<ul>
+<li><p><strong>Renal artery</strong>: from aorta</p>
+<ul>
+<li><p><strong>Superior segmental artery</strong></p></li>
+<li><p><strong>Antero-superior segmental artery</strong></p></li>
+<li><p><strong>Antero-inferior segmental artery</strong></p></li>
+<li><p><strong>Inferior segmental artery</strong></p></li>
+<li><p><strong>Posterior segmental artery</strong></p></li>
+</ul>
+</li>
+<li><p><strong>Suprarenal artery</strong></p>
+<ul>
+<li><p><strong>Superior suprarenal artery</strong>: from inferior phrenic artery</p></li>
+<li><p><strong>Middle suprarenal artery</strong>: from abdominal aorta</p></li>
+<li><p><strong>Inferior suprarenal artery</strong>: from renal artery</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Veins</p>
+<ul>
+<li><p><strong>Renal vein</strong>: to IVC</p>
+<ul>
+<li><p><strong>Right renal artery</strong></p></li>
+<li><p><strong>Left renal artery</strong>: receive suprarenal vein and gonadal vein</p></li>
+</ul>
+</li>
+<li><p><strong>Suprarenal vein</strong></p>
+<ul>
+<li><p><strong>Right suprarenal vein</strong>: to IVC</p></li>
+<li><p><strong>Left suprarenal vein</strong>: to renal vein</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Lymphatics</p>
+<ul>
+<li><p>Lumbar lymph nodes</p></li>
+</ul>
+</li>
+<li><p>Nerves</p>
+<ul>
+<li><p>Thoracic splanchnic nerve (sympathetic)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="summary-of-innervation">
+<h3>Summary of Innervation<a class="headerlink" href="#summary-of-innervation" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Sympathetic innrevation (presynaptic)</p>
+<ul>
+<li><p><strong>Greater splanchnic nerve</strong>: T5 - T9</p></li>
+<li><p><strong>Lesser splanchnic nerve</strong>: T10 - T11</p></li>
+<li><p><strong>Least splanchnic nerve</strong>: T12</p></li>
+<li><p><strong>Lumbar splanchnic nerve</strong>: L1 - L2</p></li>
+</ul>
+</li>
+<li><p>Parasympathetic innervation (presynaptic)</p>
+<ul>
+<li><p>Vagus nerve: CN10</p></li>
+<li><p><strong>Pelvic splanchnic nerve</strong>: S2 - S4</p></li>
+</ul>
+</li>
+<li><p>Extrincis autonomic plexus</p>
+<ul>
+<li><p><strong>Celiac plexus</strong>: <strong>celiac ganglion</strong></p>
+<ul>
+<li><p>Parasympathetic: vagus nerve</p></li>
+<li><p>Sympathetic: greater splanchnic nerve</p></li>
+</ul>
+</li>
+<li><p><strong>Superior mesenteric plexus</strong>: superior mesenteric ganglion</p>
+<ul>
+<li><p>Parasympathetic: celiac plexus</p></li>
+<li><p>Sympathetic: lesser splanchnic nerve</p></li>
+</ul>
+</li>
+<li><p>Renal plexus: aorticorenal ganglion</p>
+<ul>
+<li><p>Sympathetic: least splanchnic nerve</p></li>
+</ul>
+</li>
+<li><p><strong>Intermesenteric plexus</strong></p></li>
+<li><p><strong>Superior hypogastric plexus</strong></p>
+<ul>
+<li><p>Sympathetic: lumbar splanchnic nerve</p></li>
+</ul>
+</li>
+<li><p><strong>Inferior hypogastric plexus</strong></p>
+<ul>
+<li><p>Parasympathetic: pelvic splanchnic nerve</p></li>
+<li><p>Sympathetic: hypogastric nerve (from superior hypogastric plexus)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Intrinsic autonomic plexus (<strong>Enteric nervous system</strong>)</p>
+<ul>
+<li><p>Presynaptic parasympathetic and sympathetic fiber</p></li>
+<li><p><strong>Myenteric plexus</strong> (of Auerbach): motility</p></li>
+<li><p><strong>Submucosal plexus</strong> (of Meissner): secretion</p></li>
+</ul>
+</li>
+<li><p>Visceral sensory innervation</p>
+<ul>
+<li><p>Pain sensation: sympathetic fibers</p></li>
+<li><p>Reflex sensation: parasympathetic fibers</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="diaphragm">
+<h2>Diaphragm<a class="headerlink" href="#diaphragm" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="posterior-abdominal-wall">
+<h2>Posterior Abdominal Wall<a class="headerlink" href="#posterior-abdominal-wall" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+
+
+              </article>
+              
+
+              
+              <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              </footer>
+              
+          </div>
+          
+      </div>
+    </div>
+
+  
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
+    &copy; Copyright 2023, HikariMusic.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
+</p>
+  </div>
+  
+</div>
+</footer>
+  </body>
+</html>

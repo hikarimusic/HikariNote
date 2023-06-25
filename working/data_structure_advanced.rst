@@ -715,6 +715,103 @@ Trie
 Suffix Tree 
 -----------
 
+:build: :math:`O(N)`
+:search: :math:`O(M)`
+
+.. tabs::
+
+    .. code-tab:: python
+
+        class Node:
+            def __init__(self, num, start, end):
+                self.num = num
+                self.start = start 
+                self.end = end
+                self.child = {}
+                self.link = None
+            
+            def len(self):
+                return self.end - self.start
+
+        class SuffixTree:
+            def __init__(self):
+                self.root = Node(-1, -1, 0)
+                self.text = ""
+            
+            def build(self, text):
+                text += '$'
+                self.text = text
+                head, tail = 0, -1
+                node, edge = self.root, 0
+                for c in text:
+                    tail += 1
+                    last = None
+                    nxet = None
+                    while tail - head >= 0:
+                        adds = False
+                        while text[edge] in node.child and (tail-edge) >= node.child[text[edge]].len():
+                            node = node.child[text[edge]]
+                            edge += node.len()
+                        if text[edge] not in node.child:
+                            node.child[text[edge]] = Node(head, tail, int(1e9))
+                            head += 1
+                            adds = True
+                            nxet = node
+                        elif text[node.child[text[edge]].start+tail-edge] != c:
+                            split = Node(-1, node.child[text[edge]].start, node.child[text[edge]].start+tail-edge)
+                            leaf = Node(head, tail, int(1e9))
+                            head += 1
+                            adds = True
+                            prev = node.child[text[edge]]
+                            prev.start += tail - edge
+                            node.child[text[edge]] = split 
+                            split.child[c] = leaf
+                            split.child[text[prev.start]] = prev
+                            nxet = split
+                        elif tail - edge == 0:
+                            nxet = node
+                        if last:
+                            last.link = nxet
+                        last = nxet
+                        if adds == False:
+                            break
+                        if node == self.root:
+                            edge += 1
+                        else:
+                            node = node.link
+            
+            def search(self, pattern):
+                acn, ace, acl = self.root, '$', -1
+                for c in pattern:
+                    acl += 1
+                    if ace == '$':
+                        ace = c
+                    elif acl == acn.child[ace].len():
+                        acn = acn.child[ace]
+                        ace = c
+                        acl = 0
+                    if ace not in acn.child or self.text[acn.child[ace].start+acl] != c:
+                        return []
+                acn = acn.child[ace]
+                res = []
+                stack = [acn]
+                while stack:
+                    u = stack.pop()
+                    if not u.child:
+                        res.append(u.num)
+                    for v in u.child.values():
+                        stack.append(v)
+                return res
+                        
+        if __name__ == '__main__':
+            tree = SuffixTree()
+            tree.build("abcabxabcd")
+            print(tree.search("bc"))
+
+    .. code-tab:: c++
+
+        working
+
 K-Dimensional Tree
 ------------------
 

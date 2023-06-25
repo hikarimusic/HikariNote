@@ -174,11 +174,6 @@
    数学
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="abdomen.html">
-   Abdomen
-  </a>
- </li>
 </ul>
 
   </div>
@@ -1046,7 +1041,111 @@ c++</li></ul><div class="tab codetab selected" data-id="0">
 </div></div></section>
 <section id="suffix-tree">
 <h2>Suffix Tree<a class="headerlink" href="#suffix-tree" title="Permalink to this heading">#</a></h2>
-</section>
+<dl class="field-list simple">
+<dt class="field-odd">build<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="math notranslate nohighlight">\(O(N)\)</span></p>
+</dd>
+<dt class="field-even">search<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="math notranslate nohighlight">\(O(M)\)</span></p>
+</dd>
+</dl>
+<div class="tabs docutils container" data-tabgroup="">
+<ul class="tabbar">
+<li class="tabbutton selected" data-id="0" onclick="sphinx_code_tabs_onclick(this)">
+python</li><li class="tabbutton" data-id="1" onclick="sphinx_code_tabs_onclick(this)">
+c++</li></ul><div class="tab codetab selected" data-id="0">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num</span> <span class="o">=</span> <span class="n">num</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">=</span> <span class="n">start</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">end</span> <span class="o">=</span> <span class="n">end</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">child</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">link</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">len</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span>
+
+<span class="k">class</span> <span class="nc">SuffixTree</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">root</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+        <span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;$&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">text</span>
+        <span class="n">head</span><span class="p">,</span> <span class="n">tail</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="n">node</span><span class="p">,</span> <span class="n">edge</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span><span class="p">,</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
+            <span class="n">tail</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">last</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">nxet</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">while</span> <span class="n">tail</span> <span class="o">-</span> <span class="n">head</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">adds</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">while</span> <span class="n">text</span><span class="p">[</span><span class="n">edge</span><span class="p">]</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">child</span> <span class="ow">and</span> <span class="p">(</span><span class="n">tail</span><span class="o">-</span><span class="n">edge</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">node</span><span class="o">.</span><span class="n">child</span><span class="p">[</span><span class="n">text</span><span class="p">[</span><span class="n">edge</span><span class="p">]]</span><span class="o">.</span><span class="n">len</span><span class="p">():</span>
+                    <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">child</span><span class="p">[</span><span class="n">text</span><span class="p">[</span><span class="n">edge</span><span class="p">]]</span>
+                    <span class="n">edge</span> <span class="o">+=</span> <span class="n">node</span><span class="o">.</span><span class="n">len</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">text</span><span class="p">[</span><span class="n">edge</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">child</span><span class="p">:</span>
+                    <span class="n">node</span><span class="o">.</span><span class="n">child</span><span class="p">[</span><span class="n">text</span><span class="p">[</span><span class="n">edge</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">tail</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="mf">1e9</span><span class="p">))</span>
+                    <span class="n">head</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="n">adds</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="n">nxet</span> <span class="o">=</span> <span class="n">node</span>
+                <span class="k">elif</span> <span class="n">text</span><span class="p">[</span><span class="n">node</span><span class="o">.</span><span class="n">child</span><span class="p">[</span><span class="n">text</span><span class="p">[</span><span class="n">edge</span><span class="p">]]</span><span class="o">.</span><span class="n">start</span><span class="o">+</span><span class="n">tail</span><span class="o">-</span><span class="n">edge</span><span class="p">]</span> <span class="o">!=</span> <span class="n">c</span><span class="p">:</span>
+                    <span class="n">split</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">child</span><span class="p">[</span><span class="n">text</span><span class="p">[</span><span class="n">edge</span><span class="p">]]</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">child</span><span class="p">[</span><span class="n">text</span><span class="p">[</span><span class="n">edge</span><span class="p">]]</span><span class="o">.</span><span class="n">start</span><span class="o">+</span><span class="n">tail</span><span class="o">-</span><span class="n">edge</span><span class="p">)</span>
+                    <span class="n">leaf</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">tail</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="mf">1e9</span><span class="p">))</span>
+                    <span class="n">head</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="n">adds</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="n">prev</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">child</span><span class="p">[</span><span class="n">text</span><span class="p">[</span><span class="n">edge</span><span class="p">]]</span>
+                    <span class="n">prev</span><span class="o">.</span><span class="n">start</span> <span class="o">+=</span> <span class="n">tail</span> <span class="o">-</span> <span class="n">edge</span>
+                    <span class="n">node</span><span class="o">.</span><span class="n">child</span><span class="p">[</span><span class="n">text</span><span class="p">[</span><span class="n">edge</span><span class="p">]]</span> <span class="o">=</span> <span class="n">split</span>
+                    <span class="n">split</span><span class="o">.</span><span class="n">child</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">leaf</span>
+                    <span class="n">split</span><span class="o">.</span><span class="n">child</span><span class="p">[</span><span class="n">text</span><span class="p">[</span><span class="n">prev</span><span class="o">.</span><span class="n">start</span><span class="p">]]</span> <span class="o">=</span> <span class="n">prev</span>
+                    <span class="n">nxet</span> <span class="o">=</span> <span class="n">split</span>
+                <span class="k">elif</span> <span class="n">tail</span> <span class="o">-</span> <span class="n">edge</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">nxet</span> <span class="o">=</span> <span class="n">node</span>
+                <span class="k">if</span> <span class="n">last</span><span class="p">:</span>
+                    <span class="n">last</span><span class="o">.</span><span class="n">link</span> <span class="o">=</span> <span class="n">nxet</span>
+                <span class="n">last</span> <span class="o">=</span> <span class="n">nxet</span>
+                <span class="k">if</span> <span class="n">adds</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+                    <span class="k">break</span>
+                <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span><span class="p">:</span>
+                    <span class="n">edge</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">link</span>
+
+    <span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pattern</span><span class="p">):</span>
+        <span class="n">acn</span><span class="p">,</span> <span class="n">ace</span><span class="p">,</span> <span class="n">acl</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span><span class="p">,</span> <span class="s1">&#39;$&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">pattern</span><span class="p">:</span>
+            <span class="n">acl</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">ace</span> <span class="o">==</span> <span class="s1">&#39;$&#39;</span><span class="p">:</span>
+                <span class="n">ace</span> <span class="o">=</span> <span class="n">c</span>
+            <span class="k">elif</span> <span class="n">acl</span> <span class="o">==</span> <span class="n">acn</span><span class="o">.</span><span class="n">child</span><span class="p">[</span><span class="n">ace</span><span class="p">]</span><span class="o">.</span><span class="n">len</span><span class="p">():</span>
+                <span class="n">acn</span> <span class="o">=</span> <span class="n">acn</span><span class="o">.</span><span class="n">child</span><span class="p">[</span><span class="n">ace</span><span class="p">]</span>
+                <span class="n">ace</span> <span class="o">=</span> <span class="n">c</span>
+                <span class="n">acl</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">if</span> <span class="n">ace</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">acn</span><span class="o">.</span><span class="n">child</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="n">acn</span><span class="o">.</span><span class="n">child</span><span class="p">[</span><span class="n">ace</span><span class="p">]</span><span class="o">.</span><span class="n">start</span><span class="o">+</span><span class="n">acl</span><span class="p">]</span> <span class="o">!=</span> <span class="n">c</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">[]</span>
+        <span class="n">acn</span> <span class="o">=</span> <span class="n">acn</span><span class="o">.</span><span class="n">child</span><span class="p">[</span><span class="n">ace</span><span class="p">]</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">stack</span> <span class="o">=</span> <span class="p">[</span><span class="n">acn</span><span class="p">]</span>
+        <span class="k">while</span> <span class="n">stack</span><span class="p">:</span>
+            <span class="n">u</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">u</span><span class="o">.</span><span class="n">child</span><span class="p">:</span>
+                <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">num</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">u</span><span class="o">.</span><span class="n">child</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+                <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">tree</span> <span class="o">=</span> <span class="n">SuffixTree</span><span class="p">()</span>
+    <span class="n">tree</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="s2">&quot;abcabxabcd&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">tree</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;bc&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div><div class="tab codetab" data-id="1">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">working</span>
+</pre></div>
+</div>
+</div></div></section>
 <section id="k-dimensional-tree">
 <h2>K-Dimensional Tree<a class="headerlink" href="#k-dimensional-tree" title="Permalink to this heading">#</a></h2>
 </section>

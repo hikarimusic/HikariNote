@@ -155,8 +155,293 @@ AVL Tree
 Splay Tree 
 ----------
 
-B-Tree 
-------
+:insert: :math:`O(\log{N})` (averaged)
+:delete: :math:`O(\log{N})` (averaged)
+:search: :math:`O(\log{N})` (averaged)
+
+.. tabs::
+
+    .. code-tab:: python
+
+        class Node:
+            def __init__(self, data):
+                self.data = data
+                self.left = None
+                self.right = None
+                self.parent = None
+
+        class SplayTree:
+            def __init__(self):
+                self.null = Node(0)
+                self.root = self.null
+
+            def append(self, p, lr, x):
+                if p == self.null:
+                    self.root = x
+                elif lr == 0:
+                    p.left = x
+                else:
+                    p.right = x
+                x.parent = p
+
+            def transplant(self, x, y):
+                if x.parent == self.null:
+                    self.root = y
+                elif x == x.parent.left:
+                    x.parent.left = y
+                else:
+                    x.parent.right = y
+                y.parent = x.parent
+            
+            def rotate_left(self, x):
+                y = x.right
+                self.append(x, 1, y.left)
+                self.transplant(x, y)
+                self.append(y, 0, x)
+
+            def rotate_right(self, x):
+                y = x.left
+                self.append(x, 0, y.right)
+                self.transplant(x, y)
+                self.append(y, 1, x)
+
+            def splay(self, x):
+                while x != self.root:
+                    if x == x.parent.left:
+                        if x.parent == x.parent.parent.left:
+                            self.rotate_right(x.parent.parent)
+                            self.rotate_right(x.parent)
+                        elif x.parent == x.parent.parent.right:
+                            self.rotate_right(x.parent)
+                            self.rotate_left(x.parent)
+                        else:
+                            self.rotate_right(x.parent)
+                    else:
+                        if x.parent == x.parent.parent.right:
+                            self.rotate_left(x.parent.parent)
+                            self.rotate_left(x.parent)
+                        elif x.parent == x.parent.parent.left:
+                            self.rotate_left(x.parent)
+                            self.rotate_right(x.parent)
+                        else:
+                            self.rotate_left(x.parent)
+
+            def insert(self, data):
+                x = Node(data)
+                x.left = self.null
+                x.right = self.null
+                p = self.null
+                c = self.root 
+                lr = 0
+                while c != self.null:
+                    p = c
+                    if data < c.data:
+                        c = c.left
+                        lr = 0
+                    else:
+                        c = c.right
+                        lr = 1
+                self.append(p, lr, x)
+                self.splay(x)
+
+            def delete(self, data):
+                p = self.null
+                c = self.root
+                while c != self.null and c.data != data:
+                    p = c
+                    if data < c.data:
+                        c = c.left
+                    else:
+                        c = c.right
+                if c == self.null:
+                    self.splay(p)
+                else:
+                    self.splay(c)
+                    if c.left == self.null:
+                        self.transplant(c, c.right)
+                    else:
+                        self.transplant(c, c.left)
+                        x = c.left
+                        while x.right != self.null:
+                            x = x.right
+                        self.splay(x)
+                        self.append(x, 1, c.right)
+
+            def search(self, data):
+                p = self.null
+                c = self.root
+                while c != self.null and c.data != data:
+                    p = c
+                    if data < c.data:
+                        c = c.left
+                    else:
+                        c = c.right
+                if c == self.null:
+                    self.splay(p)
+                    return False
+                self.splay(c)
+                return True
+
+        if __name__ == '__main__':
+            tree = SplayTree()
+            tree.insert(7)
+            tree.insert(2)
+            tree.insert(10)
+            tree.insert(8)
+            tree.insert(9)
+            tree.delete(8)
+            tree.insert(6)
+            tree.insert(1)
+            tree.insert(4)
+            tree.delete(7)
+            tree.delete(4)
+            tree.insert(3)
+            tree.delete(6)
+            tree.insert(5)
+            for i in range(1, 11):
+                if tree.search(i):
+                    print(i)
+
+    .. code-tab:: c++
+
+        working
+
+Treap
+-----
+
+:insert: :math:`O(\log{N})` (averaged)
+:delete: :math:`O(\log{N})` (averaged)
+:search: :math:`O(\log{N})` (averaged)
+
+.. tabs::
+
+    .. code-tab:: python
+
+        import random
+
+        class Node:
+            def __init__(self, data):
+                self.data = data
+                self.prior = 0
+                self.left = None
+                self.right = None 
+                self.parent = None
+
+        class Treap:
+            def __init__(self):
+                self.null = Node(0)
+                self.root = self.null
+
+            def append(self, p, lr, x):
+                if p == self.null:
+                    self.root = x
+                elif lr == 0:
+                    p.left = x
+                else:
+                    p.right = x
+                x.parent = p
+            
+            def transplant(self, x, y):
+                if x.parent == self.null:
+                    self.root = y
+                elif x == x.parent.left:
+                    x.parent.left = y
+                else:
+                    x.parent.right = y
+                y.parent = x.parent
+            
+            def rotate_left(self, x):
+                y = x.right
+                self.append(x, 1, y.left)
+                self.transplant(x, y)
+                self.append(y, 0, x)
+            
+            def rotate_right(self, x):
+                y = x.left
+                self.append(x, 0, y.right)
+                self.transplant(x, y)
+                self.append(y, 1, x)
+
+            def insert(self, data):
+                x = Node(data)
+                x.prior = random.randrange(100)
+                x.left = self.null
+                x.right = self.null
+                p = self.null
+                c = self.root
+                lr = 0
+                while c != self.null:
+                    p = c
+                    if data < c.data:
+                        c = c.left
+                        lr = 0
+                    else:
+                        c = c.right
+                        lr = 1
+                self.append(p, lr, x)
+                while x != self.root and x.prior > x.parent.prior:
+                    if x == x.parent.left:
+                        self.rotate_right(x.parent)
+                    else:
+                        self.rotate_left(x.parent)
+
+            def delete(self, data):
+                x = self.root
+                while x != self.null and x.data != data:
+                    if data < x.data:
+                        x = x.left
+                    else:
+                        x = x.right
+                if x == self.null:
+                    return
+                fg = 0
+                while fg == 0:
+                    if x.left == self.null:
+                        self.transplant(x, x.right)
+                        fg = 1
+                    elif x.right == self.null:
+                        self.transplant(x, x.left)
+                        fg = 1
+                    else:
+                        if x.left.prior > x.right.prior:
+                            self.rotate_right(x)
+                        else:
+                            self.rotate_left(x)
+            
+            def search(self, data):
+                x = self.root
+                while x != self.null and x.data != data:
+                    if data < x.data:
+                        x = x.left
+                    else:
+                        x = x.right
+                if x == self.null:
+                    return False
+                return True
+
+        if __name__ == '__main__':
+            tree = Treap()
+            tree.insert(7)
+            tree.insert(2)
+            tree.insert(10)
+            tree.insert(8)
+            tree.insert(9)
+            tree.delete(8)
+            tree.insert(6)
+            tree.insert(1)
+            tree.insert(4)
+            tree.delete(7)
+            tree.delete(4)
+            tree.insert(3)
+            tree.delete(6)
+            tree.insert(5)
+            for i in range(1, 11):
+                if tree.search(i):
+                    print(i)
+
+    .. code-tab:: c++
+
+        working
 
 Red-Black Tree
 --------------
@@ -368,142 +653,8 @@ Red-Black Tree
 
         working
 
-Treap
------
-
-:insert: :math:`O(\log{N})` (averaged)
-:delete: :math:`O(\log{N})` (averaged)
-:search: :math:`O(\log{N})` (averaged)
-
-.. tabs::
-
-    .. code-tab:: python
-
-        import random
-
-        class Node:
-            def __init__(self, data):
-                self.data = data
-                self.prior = 0
-                self.left = None
-                self.right = None 
-                self.parent = None
-
-        class Treap:
-            def __init__(self):
-                self.null = Node(0)
-                self.root = self.null
-
-            def append(self, p, lr, x):
-                if p == self.null:
-                    self.root = x
-                elif lr == 0:
-                    p.left = x
-                else:
-                    p.right = x
-                x.parent = p
-            
-            def transplant(self, x, y):
-                if x.parent == self.null:
-                    self.root = y
-                elif x == x.parent.left:
-                    x.parent.left = y
-                else:
-                    x.parent.right = y
-                y.parent = x.parent
-            
-            def rotate_left(self, x):
-                y = x.right
-                self.append(x, 1, y.left)
-                self.transplant(x, y)
-                self.append(y, 0, x)
-            
-            def rotate_right(self, x):
-                y = x.left
-                self.append(x, 0, y.right)
-                self.transplant(x, y)
-                self.append(y, 1, x)
-
-            def insert(self, data):
-                x = Node(data)
-                x.prior = random.randrange(100)
-                x.left = self.null
-                x.right = self.null
-                p = self.null
-                c = self.root
-                lr = 0
-                while c != self.null:
-                    p = c
-                    if data < c.data:
-                        c = c.left
-                        lr = 0
-                    else:
-                        c = c.right
-                        lr = 1
-                self.append(p, lr, x)
-                while x != self.root and x.prior > x.parent.prior:
-                    if x == x.parent.left:
-                        self.rotate_right(x.parent)
-                    else:
-                        self.rotate_left(x.parent)
-
-            def delete(self, data):
-                x = self.root
-                while x != self.null and x.data != data:
-                    if data < x.data:
-                        x = x.left
-                    else:
-                        x = x.right
-                if x == self.null:
-                    return
-                fg = 0
-                while fg == 0:
-                    if x.left == self.null:
-                        self.transplant(x, x.right)
-                        fg = 1
-                    elif x.right == self.null:
-                        self.transplant(x, x.left)
-                        fg = 1
-                    else:
-                        if x.left.prior > x.right.prior:
-                            self.rotate_right(x)
-                        else:
-                            self.rotate_left(x)
-            
-            def search(self, data):
-                x = self.root
-                while x != self.null and x.data != data:
-                    if data < x.data:
-                        x = x.left
-                    else:
-                        x = x.right
-                if x == self.null:
-                    return False
-                return True
-
-        if __name__ == '__main__':
-            tree = Treap()
-            tree.insert(7)
-            tree.insert(2)
-            tree.insert(10)
-            tree.insert(8)
-            tree.insert(9)
-            tree.delete(8)
-            tree.insert(6)
-            tree.insert(1)
-            tree.insert(4)
-            tree.delete(7)
-            tree.delete(4)
-            tree.insert(3)
-            tree.delete(6)
-            tree.insert(5)
-            for i in range(1, 11):
-                if tree.search(i):
-                    print(i)
-
-    .. code-tab:: c++
-
-        working
+B-Tree 
+------
 
 Segment Tree
 ------------
@@ -815,5 +966,58 @@ Suffix Tree
 K-Dimensional Tree
 ------------------
 
+Fibonacci Heap
+--------------
+
 Disjoint Set 
 ------------
+
+:build: :math:`O(N)`
+:find: :math:`O(\alpha(N))` (about :math:`O(1)` )
+:union: :math:`O(\alpha(N))` (about :math:`O(1)` )
+
+.. tabs::
+
+    .. code-tab:: python
+
+        class DisjointSet:
+            def __init__(self, size):
+                self.size = size
+                self.par = [0 for i in range(size)]
+                self.cnt = [0 for i in range(size)]
+
+            def build(self):
+                for x in range(self.size):
+                    self.par[x] = x
+                    self.cnt[x] = 1
+            
+            def find(self, x):
+                if self.par[x] != x:
+                    self.par[x] = self.find(self.par[x])
+                return self.par[x]
+            
+            def union(self, x, y):
+                a = self.find(x)
+                b = self.find(y)
+                if a == b:
+                    return
+                if self.cnt[a] < self.cnt[b]:
+                    a, b = b, a
+                self.par[b] = a
+                self.cnt[a] += self.cnt[b]
+
+        if __name__ == '__main__':
+            myset = DisjointSet(8)
+            myset.build()
+            myset.union(0, 1)
+            myset.union(2, 3)
+            myset.union(3, 4)
+            myset.union(5, 6)
+            myset.union(1, 4)
+            print(myset.find(0))
+            print(myset.find(3))
+            print(myset.find(6))
+
+    .. code-tab:: c++
+
+        working

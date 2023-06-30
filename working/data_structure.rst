@@ -211,3 +211,44 @@ Hash Table
 
 Graph 
 -----
+
+:addEdge: :math:`O(1)`
+:delEdge: :math:`O(E)`
+:neighbor: :math:`O(E)`
+
+.. tabs::
+
+    .. code-tab:: python
+
+        class Graph:
+            def __init__(self, size):
+                self.adj = [[] for i in range(size)]
+            
+            def addEdge(self, x, y):
+                self.adj[x].append(y)
+                self.adj[y].append(x)
+            
+            def delEdge(self, x, y):
+                self.adj[x].remove(y)
+                self.adj[y].remove(x)
+            
+            def neighbor(self, x):
+                return [y for y in self.adj[x]]
+
+        if __name__ == '__main__':
+            graph = Graph(5)
+            graph.addEdge(0, 1)
+            graph.addEdge(0, 2)
+            graph.addEdge(0, 3)
+            graph.addEdge(0, 4)
+            graph.addEdge(1, 2)
+            graph.addEdge(2, 3)
+            graph.addEdge(3, 4)
+            graph.delEdge(0, 2)
+            graph.delEdge(3, 4)
+            for x in graph.neighbor(2):
+                print(x)
+
+    .. code-tab:: c++
+
+        working

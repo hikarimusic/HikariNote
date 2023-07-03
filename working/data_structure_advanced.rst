@@ -656,6 +656,198 @@ Red-Black Tree
 B-Tree 
 ------
 
+:insert: :math:`O(\log{N})`
+:delete: :math:`O(\log{N})`
+:search: :math:`O(\log{N})`
+
+.. tabs::
+
+    .. code-tab:: python
+
+        class Node:
+            def __init__(self, degree):
+                self.keys = [0 for i in range(degree)]
+                self.child = [None for i in range(degree+1)]
+                self.parent = None
+                self.cnt = 0
+            
+        class BTree:
+            def __init__(self, degree):
+                self.deg = degree
+                self.root = Node(self.deg)
+            
+            def balance_insert(self, x):
+                while x.cnt == self.deg:
+                    if x == self.root:
+                        self.root = Node(self.deg)
+                        self.root.child[0] = x
+                        x.parent = self.root
+                    y = Node(self.deg)
+                    for i in range(x.cnt//2):
+                        y.keys[i] = x.keys[i+(x.cnt+1)//2]
+                    for i in range(x.cnt//2+1):
+                        y.child[i] = x.child[i+(x.cnt+1)//2]
+                        if y.child[i]:
+                            y.child[i].parent = y
+                    y.parent = x.parent 
+                    y.cnt = x.cnt // 2
+                    x.cnt = (x.cnt-1) // 2
+                    p = x.parent
+                    for i in range(p.cnt+1):
+                        if p.child[i] == x:
+                            c = i
+                    for i in range(p.cnt-1, c-1, -1):
+                        p.keys[i+1] = p.keys[i]
+                    for i in range(p.cnt, c, -1):
+                        p.child[i+1] = p.child[i]
+                    p.keys[c] = x.keys[x.cnt]
+                    p.child[c+1] = y
+                    p.cnt += 1
+                    x = p
+            
+            def balance_delete(self, x):
+                while x.cnt < (self.deg-1)//2:
+                    if x == self.root:
+                        if x.cnt == 0:
+                            self.root = x.child[0]
+                        break
+                    p = x.parent
+                    for i in range(p.cnt+1):
+                        if p.child[i] == x:
+                            c = i
+                    if c > 0 and p.child[c-1].cnt > (self.deg-1)//2:
+                        s = p.child[c-1]
+                        for i in range(x.cnt-1, -1, -1):
+                            x.keys[i+1] = x.keys[i]
+                        for i in range(x.cnt, -1, -1):
+                            x.child[i+1] = x.child[i]
+                        x.keys[0] = p.keys[c-1]
+                        x.child[0] = s.child[s.cnt]
+                        if x.child[0]:
+                            x.child[0].parent = x
+                        x.cnt += 1
+                        p.keys[c-1] = s.keys[s.cnt-1]
+                        s.cnt -= 1
+                    elif c < p.cnt and p.child[c+1].cnt > (self.deg-1)//2:
+                        s = p.child[c+1]
+                        x.keys[x.cnt] = p.keys[c]
+                        x.child[x.cnt+1] = s.child[0]
+                        if x.child[x.cnt+1]:
+                            x.child[x.cnt+1].parent = x
+                        x.cnt += 1
+                        p.keys[c] = s.keys[0]
+                        for i in range(1, s.cnt):
+                            s.keys[i-1] = s.keys[i]
+                        for i in range(1, s.cnt+1):
+                            s.child[i-1] = s.child[i]
+                        s.cnt -= 1
+                    elif c > 0:
+                        s = p.child[c-1]
+                        s.keys[s.cnt] = p.keys[c-1]
+                        for i in range(x.cnt):
+                            s.keys[i+s.cnt+1] = x.keys[i]
+                        for i in range(x.cnt+1):
+                            s.child[i+s.cnt+1] = x.child[i]
+                            if s.child[i+s.cnt+1]:
+                                s.child[i+s.cnt+1].parent = s
+                        s.cnt += (1+x.cnt)
+                        for i in range(c, p.cnt):
+                            p.keys[i-1] = p.keys[i]
+                        for i in range(c+1, p.cnt+1):
+                            p.child[i-1] = p.child[i]
+                        p.cnt -= 1
+                    else:
+                        s = p.child[c+1]
+                        x.keys[x.cnt] = p.keys[c]
+                        for i in range(s.cnt):
+                            x.keys[i+x.cnt+1] = s.keys[i]
+                        for i in range(s.cnt+1):
+                            x.child[i+x.cnt+1] = x.child[i]
+                            if x.child[i+x.cnt+1]:
+                                x.child[i+x.cnt+1].parent = x
+                        x.cnt += (1+s.cnt)
+                        for i in range(c+1, p.cnt):
+                            p.keys[i-1] = p.keys[i]
+                        for i in range(c+2, p.cnt+1):
+                            p.child[i-1] = p.child[i]
+                        p.cnt -= 1
+                    x = p
+
+            def insert(self, data):   
+                x = self.root
+                c = 0
+                fg = False
+                while not fg:
+                    if c < x.cnt and data > x.keys[c]:
+                        c += 1
+                    elif x.child[c]:
+                        x = x.child[c]
+                        c = 0
+                    else:
+                        fg = True
+                for i in range(x.cnt-1, c-1, -1):
+                    x.keys[i+1] = x.keys[i]
+                x.keys[c] = data
+                x.cnt += 1
+                self.balance_insert(x)
+            
+            def delete(self, data):
+                x = self.root
+                c = 0
+                fg = False
+                while x and (not fg):
+                    if c == x.cnt or data < x.keys[c]:
+                        x = x.child[c]
+                        c = 0
+                    elif data == x.keys[c]:
+                        fg = True
+                    else:
+                        c += 1
+                if not fg:
+                    return
+                if x.child[c]:
+                    y = x.child[c]
+                    while y.child[y.cnt]:
+                        y = y.child[y.cnt]
+                    x.keys[c] = y.keys[y.cnt-1]
+                    y.cnt -= 1
+                    x = y
+                else:
+                    for i in range(c+1, x.cnt):
+                        x.keys[i-1] = x.keys[i]
+                    x.cnt -= 1
+                self.balance_delete(x)
+            
+            def search(self, data):
+                x = self.root
+                c = 0
+                fg = False
+                while x and (not fg):
+                    if c == x.cnt or data < x.keys[c]:
+                        x = x.child[c]
+                        c = 0
+                    elif data == x.keys[c]:
+                        fg = True
+                    else:
+                        c += 1
+                if not fg:
+                    return False
+                return True
+
+        if __name__ == '__main__':
+            tree = BTree(4)
+            for i in [8, 16, 18, 1, 12, 10, 15, 4, 2, 7, 13, 3, 17, 5, 11, 14, 9, 20, 6, 19]:
+                tree.insert(i)
+            for i in [4, 6, 3, 8, 1, 15, 14, 20, 16, 13, 19]:
+                tree.delete(i)
+            for i in range(1, 21):
+                if tree.search(i):
+                    print(i)
+
+    .. code-tab:: c++
+
+        working
+
 Segment Tree
 ------------
 

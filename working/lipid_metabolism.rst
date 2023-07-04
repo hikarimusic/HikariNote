@@ -1,0 +1,161 @@
+Lipid Metabolism
+================
+
+Lipoprotein
+-----------
+
+Chylomicron 
+^^^^^^^^^^^
+
+- **Origin**: *intestine*
+- **Function**: *triacylglycerol, tissue*
+- **Apolipoprotein**: *apoC-II, lipoprotein lipase, triacylglycerol hydrolysis*
+
+VLDL 
+^^^^
+
+- **Origin**: *liver*
+- **Function**: *triacylglycerol, tissue*
+- **Apolipoprotein**: *apoC-II, lipoprotein lipase, triacylglycerol hydrolysis*
+
+LDL
+^^^
+
+- **Origin**: *VLDL, IDL*
+- **Function**: *cholesterol, tissue*
+- **Apolipoprotein**: *apoB-100, LDL recepter, recepter-mediated endocytosis*
+- **Enzyme**: *LCAT, cholesterol ester*
+- **Disease**: *familial hypercholesterolemia, atherosclerosis, LDL recepter*
+
+HDL
+^^^
+
+- **Origin**: *liver*
+- **Function**: *cholesterol, liver*
+- **Enzyme**: *LCAT, cholesterol ester*
+
+Fatty Acid Oxidation
+--------------------
+
+Activation and Transport 
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+- **Activation (cytosol)**: *fatty acid, ATP, CoA-SH, acyl-CoA synthetases, acyl-CoA*
+- **Transport (intermembrane space)**: *acyl-CoA, carnitine, carnitine acyltransferase I, acyl-carnitine, CoA-SH*
+- **Transport (mitochondria matrix)**: *acyl-carnitine, CoA-SH, carnitine acyltransferase II, acyl-CoA, carnitine*
+
+β-Oxidation
+^^^^^^^^^^^
+
+- **Reaction 1**: *acyl-CoA, acyl-CoA dehydrogenase, trans-enoyl-CoA, FADH2*
+- **Reaction 2**: *trans-enoyl-CoA, enoyl-CoA-hydratase, β-hydroxyacyl-CoA*
+- **Reaction 3**: *β-hydroxyacyl-CoA, hydroxyacyl-CoA dehydrogenase, β-ketoacyl-CoA, NADH*
+- **Reaction 4**: *β-ketoacyl-CoA, CoA-SH, thiolase, acyl-CoA, acetyl-CoA*
+
+Variation of Oxidation 
+^^^^^^^^^^^^^^^^^^^^^^
+
+- **Unsaturated fatty acid**: *enoyl-CoA isomerase, 2,4-dienoyl-CoA reductase*
+- **Odd-numbered fatty acid**: *propionyl-CoA, propionyl-CoA carboxylase, succinyl-CoA*
+- **Peroxisomal β-oxidation**: *acyl-CoA oxidase, catalase, very long-chain fatty acid, ALD*
+
+Ketogenesis
+^^^^^^^^^^^
+
+- **Definition**: *liver, acetyl-CoA, ketone bodies*
+- **Generation 1**: *acetyl-CoA, thiolase, acetoacetyl-CoA, HMG-CoA synthase, HMG-CoA*
+- **Generation 2**: *HMG-CoA, HMG-CoA lyase, acetoacetate, acetone, β-hydroxybutyrate*
+- **Usage**: *β-hydoxybutyrate, NADH, acetoacetate, β-ketoacyl-CoA transferase, acetoacetyl-CoA, thiolase, acetyl-CoA*
+- **Disease**: *diabetes, ketosis, ketoacidosis*
+
+Fatty Acid Biosynthesis
+-----------------------
+
+Transport 
+^^^^^^^^^
+
+- **Transport (mitochondrion)**: *acetyl-CoA, oxaloacetate, citrate synthase, citrate*
+- **Transport (cytosol)**: *citrate, CoA-SH, ATP, citrate lyase, acetyl-CoA, oxaloacetate*
+- **Recycle (cytosol)**: *oxaloacetate, NADH, malate, pyruvate, NADPH*
+- **Recycle (mitochondrion)**: *pyruvate, ATP, oxaloacetate*
+
+Synthesis 
+^^^^^^^^^
+
+- **Reaction 0.1**: *acetyl-CoA, ATP, acetyl-CoA carboxylase, biotin, malonyl-CoA*
+- **Reaction 0.2**: *malonyl-CoA, ACP, transacylase, malonyl-ACP, CoA-SH*
+- **Reaction 1**: *acyl-ACP, malonyl-ACP, synthase, β-ketoacyl-ACP*
+- **Reaction 2**: *β-ketoacyl-ACP, NADPH, reductase, β-hydroxyacyl-ACP*
+- **Reaction 3**: *β-hydroxyacyl-ACP, dehydrase, trans-enoyl-ACP*
+- **Reaction 4**: *trans-enoyl-ACP, NADPH, reductase, acyl-ACP*
+
+Desaturation
+^^^^^^^^^^^^
+
+- **Animal**: *Δ9 desaturase*
+- **Plants**: *Δ9 Δ12 Δ15 desaturase, essential fatty acids*
+
+Triacylglycerol Synthesis 
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- **Reaction 1**: *pyruvate, pyruvate carboxylase, PEPCK, DHAP, G3P dehydrogenase, glycerol-3-phosphate*
+- **Reaction 2**: *glycerol-3-phosphate, diacylglycerol-3-phosphate, diacylglycerol, triacylglycerol*
+
+Phospolipid and Eicosanoid
+--------------------------
+
+Glycerophospholipid
+^^^^^^^^^^^^^^^^^^^
+
+- **Phosphatidylcholine**: *diacylglycerol, CDP-choline, phosphatidylcholine*
+- **Phosphatidylethanolamine**: *diacylglycerol, CDP-ethanolamine, phosphatidylcholine*
+- **Phosphatidylserine**: *phosphatidylethanolamine, serine, phosphatidylserine, choline*
+- **Phosphatidylinositol**: *CDP-diacylglycerol, inositol, phosphatidylinositol*
+
+Sphingolipid
+^^^^^^^^^^^^
+
+- **Ceramide**: *serine, palmitoyl-CoA, acyl-CoA, ceramide*
+- **Sphingomyelin**: *ceramide, phosphatidylcholine, sphingomyelin*
+- **Cerebroside**: *ceramide, UDP-glucose, cerebroside*
+- **Ganglioside**: *ceramide, UDP-glucode, UDP-galactose, UDP-N-acetylgalactosamine, CMP-N-acetylneuraminic acid, ganglioside*
+- **Disease**: *sphigolipidoses, Tay-Sachs disease, lysosome hydrolytic enzyme*
+
+Eicosanoid
+^^^^^^^^^^
+
+- **Arachidonic acid**: *phospholipid, phospholipase, arachidonic acid*
+- **Prostagladin**: *arachidonate, cyclooxygenase, Prostagladin, inflammation, thromboxane, platelet aggregation*
+- **Leukotrine**: *arachidonate, lipooxygenase, leukotrine, asthma*
+- **Drug**: *Glucocorticoid, PLA2, NSAID, COX-1, constituitive, COX-2, induced*
+
+Steroid Metabolism
+------------------
+
+Cholesterol Synthesis 
+^^^^^^^^^^^^^^^^^^^^^
+
+- **Reaction 1.1**: *acetyl-CoA, thiolase, acetoacetyl-CoA, HMG-CoA synthase, HMG-CoA*
+- **Reaction 1.2**: *HMG-CoA, 2NADPH, HMG-CoA reductase, Mevalonate (6C)*
+- **Reaction 2.1**: *Mevalonate (6C), 3ATP, Isopentenyl pyrophosphate (5C)*
+- **Reaction 2.2**: *Isopentenyl pyrophosphate (5C), Geranyl pyrophosphate (10C), Farnesyl pyrophosphate (15C)*
+- **Reaction 2.3**: *2 Farnesyl pyrophosphate (15C), squalene synthase, squalene (30C)*
+- **Reaction 3.1**: *squalene (30C), cyclase, cholesterol (27C)*
+
+Bile Acid 
+^^^^^^^^^
+
+- **First reaction**: *cholesterol, 7α-hydroxylase, 7α-hydroxycholesterol*
+- **Bile acids**: *cholate, chenodeoxycholate* 
+- **Bile salts**: *glycocholate, taurocholate*
+
+Steroid Hormone 
+^^^^^^^^^^^^^^^
+
+- **First reaction**: *cholesterol, side chain cleavage enzyme, pregnenolone*
+- **Progentin**: *pregnenolone, 3β-dehydrogenase, progesterone*
+- **Mineralcorticoid**: *progesterone, 21-hydroxylase, 11β-hydroxylase, aldosterone*
+- **Glucocorticoid**: *progesterone, 17α-hydroxylase, 21-hydroxylase, 11β-hydroxylase, cortisol*
+- **Androgen**: *progesterone, 17α-hydroxylase, androstenedione, reductase, testosterone, 5α-reductase, dihydrotestosterone*
+- **Estrogen**: *androstenedione, testosterone, aromatase, estrone, estradiol*
+- **Disease**: *congenital adrenal hyerplasia, 21-hydroxylase, cortisol, adrongen*

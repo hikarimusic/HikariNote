@@ -1,0 +1,587 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Lipid Metabolism &#8212; HikariNote  documentation</title>
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
+
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/code-tabs.css" />
+
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/code-tabs.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Data Structure" href="data_structure.html" />
+    <link rel="prev" title="Carbohydrate Metabolism" href="carbohydrate_metabolism.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
+
+    
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
+
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    <img src="../_static/banner.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/banner.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="fas fa-bars"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../medicine/index.html">
+  <strong>
+   Medicine
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../computer/index.html">
+  <strong>
+   Computer
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../others/index.html">
+  <strong>
+   Others
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  <strong>
+   Working
+  </strong>
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/hikarimusic/HikariNote" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
+          
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="carbohydrate_metabolism.html">
+   Carbohydrate Metabolism
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lipid Metabolism
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_structure.html">
+   Data Structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_structure_advanced.html">
+   Data Structure (Advanced)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sugaku.html">
+   数学
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
+
+          
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lipoprotein">
+   Lipoprotein
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#chylomicron">
+     Chylomicron
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vldl">
+     VLDL
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ldl">
+     LDL
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hdl">
+     HDL
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fatty-acid-oxidation">
+   Fatty Acid Oxidation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#activation-and-transport">
+     Activation and Transport
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oxidation">
+     β-Oxidation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variation-of-oxidation">
+     Variation of Oxidation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ketogenesis">
+     Ketogenesis
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fatty-acid-biosynthesis">
+   Fatty Acid Biosynthesis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transport">
+     Transport
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#synthesis">
+     Synthesis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#desaturation">
+     Desaturation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#triacylglycerol-synthesis">
+     Triacylglycerol Synthesis
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#phospolipid-and-eicosanoid">
+   Phospolipid and Eicosanoid
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#glycerophospholipid">
+     Glycerophospholipid
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sphingolipid">
+     Sphingolipid
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eicosanoid">
+     Eicosanoid
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steroid-metabolism">
+   Steroid Metabolism
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cholesterol-synthesis">
+     Cholesterol Synthesis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bile-acids">
+     Bile Acids
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#steroid-hormones">
+     Steroid Hormones
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
+
+          
+          
+          <div class="bd-content col-12 col-md-9 col-xl-7">
+              
+              <article class="bd-article" role="main">
+                
+  <section id="lipid-metabolism">
+<h1>Lipid Metabolism<a class="headerlink" href="#lipid-metabolism" title="Permalink to this heading">#</a></h1>
+<section id="lipoprotein">
+<h2>Lipoprotein<a class="headerlink" href="#lipoprotein" title="Permalink to this heading">#</a></h2>
+<section id="chylomicron">
+<h3>Chylomicron<a class="headerlink" href="#chylomicron" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Origin</strong>: <em>intestine</em></p></li>
+<li><p><strong>Function</strong>: <em>triacylglycerol, tissue</em></p></li>
+<li><p><strong>Apolipoprotein</strong>: <em>apoC-II, lipoprotein lipase, triacylglycerol hydrolysis</em></p></li>
+</ul>
+</section>
+<section id="vldl">
+<h3>VLDL<a class="headerlink" href="#vldl" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Origin</strong>: <em>liver</em></p></li>
+<li><p><strong>Function</strong>: <em>triacylglycerol, tissue</em></p></li>
+<li><p><strong>Apolipoprotein</strong>: <em>apoC-II, lipoprotein lipase, triacylglycerol hydrolysis</em></p></li>
+</ul>
+</section>
+<section id="ldl">
+<h3>LDL<a class="headerlink" href="#ldl" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Origin</strong>: <em>VLDL, IDL</em></p></li>
+<li><p><strong>Function</strong>: <em>cholesterol, tissue</em></p></li>
+<li><p><strong>Apolipoprotein</strong>: <em>apoB-100, LDL recepter, recepter-mediated endocytosis</em></p></li>
+<li><p><strong>Enzyme</strong>: <em>LCAT, cholesterol ester</em></p></li>
+<li><p><strong>Disease</strong>: <em>familial hypercholesterolemia, atherosclerosis, LDL recepter</em></p></li>
+</ul>
+</section>
+<section id="hdl">
+<h3>HDL<a class="headerlink" href="#hdl" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Origin</strong>: <em>liver</em></p></li>
+<li><p><strong>Function</strong>: <em>cholesterol, liver</em></p></li>
+<li><p><strong>Enzyme</strong>: <em>LCAT, cholesterol ester</em></p></li>
+</ul>
+</section>
+</section>
+<section id="fatty-acid-oxidation">
+<h2>Fatty Acid Oxidation<a class="headerlink" href="#fatty-acid-oxidation" title="Permalink to this heading">#</a></h2>
+<section id="activation-and-transport">
+<h3>Activation and Transport<a class="headerlink" href="#activation-and-transport" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Activation (cytosol)</strong>: <em>fatty acid, ATP, CoA-SH, acyl-CoA synthetases, acyl-CoA</em></p></li>
+<li><p><strong>Transport (intermembrane space)</strong>: <em>acyl-CoA, carnitine, carnitine acyltransferase I, acyl-carnitine, CoA-SH</em></p></li>
+<li><p><strong>Transport (mitochondria matrix)</strong>: <em>acyl-carnitine, CoA-SH, carnitine acyltransferase II, acyl-CoA, carnitine</em></p></li>
+</ul>
+</section>
+<section id="oxidation">
+<h3>β-Oxidation<a class="headerlink" href="#oxidation" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Reaction 1</strong>: <em>acyl-CoA, acyl-CoA dehydrogenase, trans-enoyl-CoA, FADH2</em></p></li>
+<li><p><strong>Reaction 2</strong>: <em>trans-enoyl-CoA, enoyl-CoA-hydratase, β-hydroxyacyl-CoA</em></p></li>
+<li><p><strong>Reaction 3</strong>: <em>β-hydroxyacyl-CoA, hydroxyacyl-CoA dehydrogenase, β-ketoacyl-CoA, NADH</em></p></li>
+<li><p><strong>Reaction 4</strong>: <em>β-ketoacyl-CoA, CoA-SH, thiolase, acyl-CoA, acetyl-CoA</em></p></li>
+</ul>
+</section>
+<section id="variation-of-oxidation">
+<h3>Variation of Oxidation<a class="headerlink" href="#variation-of-oxidation" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Unsaturated fatty acid</strong>: <em>enoyl-CoA isomerase, 2,4-dienoyl-CoA reductase</em></p></li>
+<li><p><strong>Odd-numbered fatty acid</strong>: <em>propionyl-CoA, propionyl-CoA carboxylase, succinyl-CoA</em></p></li>
+<li><p><strong>Peroxisomal β-oxidation</strong>: <em>acyl-CoA oxidase, catalase, very long-chain fatty acid, ALD</em></p></li>
+</ul>
+</section>
+<section id="ketogenesis">
+<h3>Ketogenesis<a class="headerlink" href="#ketogenesis" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Definition</strong>: <em>liver, acetyl-CoA, ketone bodies</em></p></li>
+<li><p><strong>Generation 1</strong>: <em>acetyl-CoA, thiolase, acetoacetyl-CoA, HMG-CoA synthase, HMG-CoA</em></p></li>
+<li><p><strong>Generation 2</strong>: <em>HMG-CoA, HMG-CoA lyase, acetoacetate, acetone, β-hydroxybutyrate</em></p></li>
+<li><p><strong>Usage</strong>: <em>β-hydoxybutyrate, NADH, acetoacetate, β-ketoacyl-CoA transferase, acetoacetyl-CoA, thiolase, acetyl-CoA</em></p></li>
+<li><p><strong>Disease</strong>: <em>diabetes, ketosis, ketoacidosis</em></p></li>
+</ul>
+</section>
+</section>
+<section id="fatty-acid-biosynthesis">
+<h2>Fatty Acid Biosynthesis<a class="headerlink" href="#fatty-acid-biosynthesis" title="Permalink to this heading">#</a></h2>
+<section id="transport">
+<h3>Transport<a class="headerlink" href="#transport" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Transport (mitochondrion)</strong>: <em>acetyl-CoA, oxaloacetate, citrate synthase, citrate</em></p></li>
+<li><p><strong>Transport (cytosol)</strong>: <em>citrate, CoA-SH, ATP, citrate lyase, acetyl-CoA, oxaloacetate</em></p></li>
+<li><p><strong>Recycle (cytosol)</strong>: <em>oxaloacetate, NADH, malate, pyruvate, NADPH</em></p></li>
+<li><p><strong>Recycle (mitochondrion)</strong>: <em>pyruvate, ATP, oxaloacetate</em></p></li>
+</ul>
+</section>
+<section id="synthesis">
+<h3>Synthesis<a class="headerlink" href="#synthesis" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Reaction 0.1</strong>: <em>acetyl-CoA, ATP, acetyl-CoA carboxylase, biotin, malonyl-CoA</em></p></li>
+<li><p><strong>Reaction 0.2</strong>: <em>malonyl-CoA, ACP, transacylase, malonyl-ACP, CoA-SH</em></p></li>
+<li><p><strong>Reaction 1</strong>: <em>acyl-ACP, malonyl-ACP, synthase, β-ketoacyl-ACP</em></p></li>
+<li><p><strong>Reaction 2</strong>: <em>β-ketoacyl-ACP, NADPH, reductase, β-hydroxyacyl-ACP</em></p></li>
+<li><p><strong>Reaction 3</strong>: <em>β-hydroxyacyl-ACP, dehydrase, trans-enoyl-ACP</em></p></li>
+<li><p><strong>Reaction 4</strong>: <em>trans-enoyl-ACP, NADPH, reductase, acyl-ACP</em></p></li>
+</ul>
+</section>
+<section id="desaturation">
+<h3>Desaturation<a class="headerlink" href="#desaturation" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Animal</strong>: <em>Δ9 desaturase</em></p></li>
+<li><p><strong>Plants</strong>: <em>Δ9 Δ12 Δ15 desaturase, essential fatty acids</em></p></li>
+</ul>
+</section>
+<section id="triacylglycerol-synthesis">
+<h3>Triacylglycerol Synthesis<a class="headerlink" href="#triacylglycerol-synthesis" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Reaction 1</strong>: <em>pyruvate, pyruvate carboxylase, PEPCK, DHAP, G3P dehydrogenase, glycerol-3-phosphate</em></p></li>
+<li><p><strong>Reaction 2</strong>: <em>glycerol-3-phosphate, diacylglycerol-3-phosphate, diacylglycerol, triacylglycerol</em></p></li>
+</ul>
+</section>
+</section>
+<section id="phospolipid-and-eicosanoid">
+<h2>Phospolipid and Eicosanoid<a class="headerlink" href="#phospolipid-and-eicosanoid" title="Permalink to this heading">#</a></h2>
+<section id="glycerophospholipid">
+<h3>Glycerophospholipid<a class="headerlink" href="#glycerophospholipid" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Phosphatidylcholine</strong>: <em>diacylglycerol, CDP-choline, phosphatidylcholine</em></p></li>
+<li><p><strong>Phosphatidylethanolamine</strong>: <em>diacylglycerol, CDP-ethanolamine, phosphatidylcholine</em></p></li>
+<li><p><strong>Phosphatidylserine</strong>: <em>phosphatidylethanolamine, serine, phosphatidylserine, choline</em></p></li>
+<li><p><strong>Phosphatidylinositol</strong>: <em>CDP-diacylglycerol, inositol, phosphatidylinositol</em></p></li>
+</ul>
+</section>
+<section id="sphingolipid">
+<h3>Sphingolipid<a class="headerlink" href="#sphingolipid" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Ceramide</strong>: <em>serine, palmitoyl-CoA, acyl-CoA, ceramide</em></p></li>
+<li><p><strong>Sphingomyelin</strong>: <em>ceramide, phosphatidylcholine, sphingomyelin</em></p></li>
+<li><p><strong>Cerebroside</strong>: <em>ceramide, UDP-glucose, cerebroside</em></p></li>
+<li><p><strong>Ganglioside</strong>: <em>ceramide, UDP-glucode, UDP-galactose, UDP-N-acetylgalactosamine, CMP-N-acetylneuraminic acid, ganglioside</em></p></li>
+<li><p><strong>Disease</strong>: <em>sphigolipidoses, Tay-Sachs disease, lysosome hydrolytic enzyme</em></p></li>
+</ul>
+</section>
+<section id="eicosanoid">
+<h3>Eicosanoid<a class="headerlink" href="#eicosanoid" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Arachidonic acid</strong>: <em>phospholipid, phospholipase, arachidonic acid</em></p></li>
+<li><p><strong>Prostagladin</strong>: <em>arachidonate, cyclooxygenase, Prostagladin, inflammation, thromboxane, platelet aggregation</em></p></li>
+<li><p><strong>Leukotrine</strong>: <em>arachidonate, lipooxygenase, leukotrine, asthma</em></p></li>
+<li><p><strong>Drug</strong>: <em>Glucocorticoid, PLA2, NSAID, COX-1, constituitive, COX-2, induced</em></p></li>
+</ul>
+</section>
+</section>
+<section id="steroid-metabolism">
+<h2>Steroid Metabolism<a class="headerlink" href="#steroid-metabolism" title="Permalink to this heading">#</a></h2>
+<section id="cholesterol-synthesis">
+<h3>Cholesterol Synthesis<a class="headerlink" href="#cholesterol-synthesis" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Reaction 1.1</strong>: <em>acetyl-CoA, thiolase, acetoacetyl-CoA, HMG-CoA synthase, HMG-CoA</em></p></li>
+<li><p><strong>Reaction 1.2</strong>: <em>HMG-CoA, 2NADPH, HMG-CoA reductase, Mevalonate (6C)</em></p></li>
+<li><p><strong>Reaction 2.1</strong>: <em>Mevalonate (6C), 3ATP, Isopentenyl pyrophosphate (5C)</em></p></li>
+<li><p><strong>Reaction 2.2</strong>: <em>Isopentenyl pyrophosphate (5C), Geranyl pyrophosphate (10C), Farnesyl pyrophosphate (15C)</em></p></li>
+<li><p><strong>Reaction 2.3</strong>: <em>2 Farnesyl pyrophosphate (15C), squalene synthase, squalene (30C)</em></p></li>
+<li><p><strong>Reaction 3.1</strong>: <em>squalene (30C), cyclase, cholesterol (27C)</em></p></li>
+</ul>
+</section>
+<section id="bile-acids">
+<h3>Bile Acids<a class="headerlink" href="#bile-acids" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>First reaction</strong>: <em>cholesterol, 7α-hydroxylase, 7α-hydroxycholesterol</em></p></li>
+<li><p><strong>Bile acids</strong>: <em>cholate, chenodeoxycholate</em></p></li>
+<li><p><strong>Bile salts</strong>: <em>glycocholate, taurocholate</em></p></li>
+</ul>
+</section>
+<section id="steroid-hormones">
+<h3>Steroid Hormones<a class="headerlink" href="#steroid-hormones" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>First reaction</strong>: <em>cholesterol, side chain cleavage enzyme, pregnenolone</em></p></li>
+<li><p><strong>Progentin</strong>: <em>pregnenolone, 3β-dehydrogenase, progesterone</em></p></li>
+<li><p><strong>Mineralcorticoid</strong>: <em>progesterone, 21-hydroxylase, 11β-hydroxylase, aldosterone</em></p></li>
+<li><p><strong>Glucocorticoid</strong>: <em>progesterone, 17α-hydroxylase, 21-hydroxylase, 11β-hydroxylase, cortisol</em></p></li>
+<li><p><strong>Androgen</strong>: <em>progesterone, 17α-hydroxylase, androstenedione, reductase, testosterone, 5α-reductase, dihydrotestosterone</em></p></li>
+<li><p><strong>Estrogen</strong>: <em>androstenedione, testosterone, aromatase, estrone, estradiol</em></p></li>
+<li><p><strong>Disease</strong>: <em>congenital adrenal hyerplasia, 21-hydroxylase, cortisol, adrongen</em></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+              </article>
+              
+
+              
+              <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="carbohydrate_metabolism.html" title="previous page">
+      <i class="fas fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Carbohydrate Metabolism</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="data_structure.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Data Structure</p>
+  </div>
+  <i class="fas fa-angle-right"></i>
+  </a>
+</div>
+              </footer>
+              
+          </div>
+          
+      </div>
+    </div>
+
+  
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
+    &copy; Copyright 2023, HikariMusic.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
+</p>
+  </div>
+  
+</div>
+</footer>
+  </body>
+</html>

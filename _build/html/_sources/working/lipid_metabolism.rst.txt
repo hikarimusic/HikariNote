@@ -56,7 +56,7 @@ Variation of Oxidation
 ^^^^^^^^^^^^^^^^^^^^^^
 
 - **Unsaturated fatty acid**: *enoyl-CoA isomerase, 2,4-dienoyl-CoA reductase*
-- **Odd-numbered fatty acid**: *propionyl-CoA, propionyl-CoA carboxylase, succinyl-CoA*
+- **Odd-numbered fatty acid**: *propionyl-CoA, HCO3-, ATP, propionyl-CoA carboxylase, succinyl-CoA*
 - **Peroxisomal β-oxidation**: *acyl-CoA oxidase, catalase, very long-chain fatty acid, ALD*
 
 Ketogenesis
@@ -142,15 +142,15 @@ Cholesterol Synthesis
 - **Reaction 2.3**: *2 Farnesyl pyrophosphate (15C), squalene synthase, squalene (30C)*
 - **Reaction 3.1**: *squalene (30C), cyclase, cholesterol (27C)*
 
-Bile Acids 
-^^^^^^^^^^
+Bile Acid 
+^^^^^^^^^
 
 - **First reaction**: *cholesterol, 7α-hydroxylase, 7α-hydroxycholesterol*
 - **Bile acids**: *cholate, chenodeoxycholate* 
 - **Bile salts**: *glycocholate, taurocholate*
 
-Steroid Hormones 
-^^^^^^^^^^^^^^^^
+Steroid Hormone 
+^^^^^^^^^^^^^^^
 
 - **First reaction**: *cholesterol, side chain cleavage enzyme, pregnenolone*
 - **Progentin**: *pregnenolone, 3β-dehydrogenase, progesterone*

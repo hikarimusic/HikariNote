@@ -56,7 +56,7 @@ Variation of Oxidation
 ^^^^^^^^^^^^^^^^^^^^^^
 
 - **Unsaturated fatty acid**: *enoyl-CoA isomerase, 2,4-dienoyl-CoA reductase*
-- **Odd-numbered fatty acid**: *propionyl-CoA, propionyl-CoA carboxylase, succinyl-CoA*
+- **Odd-numbered fatty acid**: *propionyl-CoA, HCO3-, ATP, propionyl-CoA carboxylase, succinyl-CoA*
 - **Peroxisomal β-oxidation**: *acyl-CoA oxidase, catalase, very long-chain fatty acid, ALD*
 
 Ketogenesis

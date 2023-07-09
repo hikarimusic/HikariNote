@@ -1,5 +1,11 @@
 # Head 
 
+## Cranium
+
+## Brain 
+
+## Face and Scalp
+
 ### Muscle of Face and Scalp
 
 - Orbicularis oculi
@@ -23,6 +29,8 @@
 - Posterior auricular
 - Occipitofrontalis
 
+## Eye
+
 ### Extraocular Muscle
 
 - Levator palpebrae superioris
@@ -33,12 +41,16 @@
 - Superior oblique
 - Inferior oblique
 
-### Muscle of Mastication
+## Ear 
 
-- Masseter
-- Temporalis
-- Medial pterygoid
-- Lateral pterygoid
+### Muscle of Middle Ear
+
+- Tensor tympani
+- Stapedius
+
+## Nose 
+
+## Oral Region 
 
 ### Muscle of Soft Palate
 
@@ -59,20 +71,20 @@
 - Styloglossus
 - Palatoglossus
 
-### Muscle of Middle Ear
+## Infratemporal Fossa
 
-- Tensor tympani
-- Stapedius
+### Muscle of Mastication
 
-### External Carotid Artery
+- Masseter
+- Temporalis
+- Medial pterygoid
+- Lateral pterygoid
 
-### Maxillary Artery
-
-### Internal Carotid Artery
-
-### Vertebral Artery
+## Pterygopalatine Fossa 
 
 # Neck 
+
+## Superficial Structure of Neck
 
 ### Muscle of Superficial Neck
 
@@ -91,6 +103,8 @@
 - Omohyoid
 - Sternothyroid
 
+## Deep Structure of Neck
+
 ### Prevertebral Muscle
 
 - Rectus capitis anterior
@@ -100,6 +114,8 @@
 - Anterior scalene
 - Middle scalene
 - Posterior scalene
+
+## Viscera of Neck
 
 ### Muscle of Pharynx
 
@@ -120,9 +136,9 @@
 - Thyro-arytenoid
 - Vocalis
 
-### Subclavian Artery
-
 # Thorax 
+
+## Thoracic Wall
 
 ### Muscle of Thoracic Wall
 
@@ -134,13 +150,19 @@
 - Serratus posterior superior
 - Serratus posterior inferior
 
-### Thoracic Aorta
+## Lung
 
 ## Heart
 
-### Aorta
+## Diaphragm
 
 # Back 
+
+## Vertebral Column
+
+## Spinal Cord
+
+## Muscle of Back
 
 ### Intrinsic Back Muscle (Erector spinae)
 
@@ -170,6 +192,8 @@
 
 # Abdomen
 
+## Anterior Abdominal Wall
+
 ### Muscle of Anterolateral Abdominal Wall
 
 - External oblique
@@ -178,6 +202,10 @@
 - Rectus abdominis
 - Pyramidalis
 
+## Abdominal Viscera
+
+## Posterior Abdominal Wall
+
 ### Muscle of Posterior Abdominal Wall
 
 - Psoas major
@@ -185,9 +213,17 @@
 - Quadratus lumborum
 - Iliacus
 
-### Abdominal Aorta
-
 # Pelvis & Perineum
+
+## Pelvic Cavity
+
+### Bone of Pelvis
+
+- **Pelvic bone**: *linea terminalis, acetabulum, obturator foramen, obturator membrane, greater sciatic notch, lesser sicatic notch*
+
+  - **Ilium**: *arcuate line, iliac fossa, iliac crest, anterior superior iliac spine, posterior superior iliac spine, anterior inferior iliac spine, posterior inferior iliac spine, gluteal surface, inferior gluteal line, anterior gluteal line, posterior gluteal line*
+  - **Pubis**: *body, pubic symphysis, pubic tubercle, superior pubic ramus, pectineal line, inferior pubic ramus*
+  - **Ischium**: *body, ramis, ischial spine, ischial tuberosity*
 
 ### Muscle of Pelvic Wall and Floor
 
@@ -195,6 +231,8 @@
 - Piriformis
 - Levator ani
 - Coccygeus
+
+## Perimeum
 
 ### Muscle of Perineum
 
@@ -205,19 +243,9 @@
 - Superficial transverse perineal muscle
 - External anal sphincter
 
-### Internal Iliac Artery
-
-### Internal Pudendal Artery
-
 # Upper Limb
 
-## Axilla
-
-## Arm
-
-## Forearm
-
-## Hand
+## Pectoral & Axillar Region
 
 ### Axio-Appendicular Muscle (Anterior)
 
@@ -243,6 +271,8 @@
 - Teres major
 - Subscapularis
 
+## Arm
+
 ### Muscle of Arm (Anterior Compartment)
 
 - Coracobrachialis
@@ -252,6 +282,8 @@
 ### Muscle of Arm (Posterior Compartment)
 
 - Triceps brachii
+
+## Forearm
 
 ### Muscle of Forearm (Anterior Compartment, Superficial)
 
@@ -285,6 +317,8 @@
 - Extensor pollicis longus
 - Extensor indicis
 
+## Hand
+
 ### Muscle of Hand (Thenar & Hypothenar)
 
 - Opponens pollicis
@@ -296,22 +330,15 @@
 
 ### Muscle of Hand (Others)
 
+- Palmaris brevis
 - Lumbricals
 - Adductor pollicis
 - Palmar interossei
 - Dorsal interossei
 
-### Axillary Artery
-
 # Lower Limb
 
-## Pelvic & Gluteal Region
-
-### Skeleton of Pelvic Girdle
-
-- Ilium
-- Ischium
-- Pubis
+## Gluteal Region
 
 ### Muscle of Gluteal Region
 
@@ -325,40 +352,26 @@
 - Gluteus maximus
 - Tensor fasciae latae
 
-### Nerve from Lumbar & Sacral Plexus
+### Artery of Gluteal Region
 
-- Lumbar plexus
+### Nerve of Gluteal Region
 
-  - Iliohypogastric nerve
-  - Ilioinguinal nerve
-  - Genitofemoral nerve
-  - Lateral cutaneous nerve of thigh
-  - Obturator nerve
-  - Femoral nerve
+### Gateway of Pelvis
 
-- Sacral plexus
-
-  - Superior gluteal nerve
-  - Inferior gluteal nerve
-  - Sciatic nerve
-  - Nerve to obturator internus
-  - Nerve to quadratus femoris
-  - Nerve to piriformis
-  - Pudendal nerve
-  - Pelvic splanchnic nerve
+- Obturator canal
+- Greater sciatic foramen
+- Lesser sciatic foramen
 
 ## Thigh
 
-### Skeleton of Thigh
+### Bone of Thigh
 
 - Femur
 - Patella
 
 ### Hip Joint
 
-- Ligament
-- Vasculature
-- Innervation
+- Acetabulum
 
 ### Muscle of Thigh (Anterior Compartment)
 
@@ -389,56 +402,31 @@
 
 - Femoral artery
 
-  - Superficial epigastric artery
-  - Superficial circumflex iliac artery
-  - External pudendal artery
-  - Profunda femoris artery
+### Nerve of Thigh
 
-    - Medial circumflex femoral artery
-    - Lateral circumflex femoral artery
+- Femoral nerve
 
-  - Popliteal artery
+### Superficial Structure of Thigh
+
+- Fascia lata
+- Great sphaenous vein
 
 ### Anatomical Region of Thigh
 
 - Femoral triangle
 - Adductor canal
 
-### Superficial Structure of Thigh
-
-- Fascia lata
-- Great saphenous vein
-
 ## Leg
 
-### Skeleton of Leg
+### Bone of Leg
 
 - Tibia
 - Fibula
 
-### Nerve from Sciatic Nerve
-
-- Tibual nerve
-
-  - Sural nerve
-
-- Common fibular nerve
-
-  - Superficial fibular nerve
-  - Deep fibular nerve
-
 ### Superficial Structure of Leg
 
-- Crural fascia
-- Small saphenous vein
-
-## Foot
-
-### Skeleton of Foot
-
-- Tarsus
-- Metatarsus
-- Phalanges
+- Deep fascia of leg
+- Small sphaenous vein
 
 ### Muscle of Leg (Posterior Compartment, Superficial)
 
@@ -465,6 +453,13 @@
 - Extensor digitorum longus
 - Fibularis tertius
 
+## Foot
+
+### Bone of Foot
+
+- Tarsus
+- Metatarsus
+- Phalanges
 
 ### Muscle of Foot (Sole, 1st & 2nd Layers)
 
@@ -487,4 +482,347 @@
 - Externsor hallucis brevis
 - Extensor digitorum brevis
 
-### Femoral Artery
+# Summary of Neurovasculature
+
+## Crainal Nerve 
+
+### Olfactory Nerve (CN I)
+
+- **SA**: *smell*
+
+### Optic Nerve (CN II)
+
+- **SA**: *vision*
+
+### Oculomotor Nerve (CN III)
+
+- **GSE**
+
+  - **Superior branch**: *levator palpebrae superioris, superior rectus*
+  - **Inferior branch**: *inferior rectus, medial rectus, and inferior oblique*
+
+- **GVE**
+
+  - **Ciliary ganglion (inferior branch)**: *sphincter pupillae, ciliary muscle*
+
+### Trochlear Nerve (CN IV)
+
+- **GSE**: *superior oblique*
+
+### Trigeminal Nerve (CN V)
+
+- **GSA**
+
+  - **Ophthalmic nerve**
+
+    - **Frontal nerve**
+
+      - **Supratrochlear nerve**: *forehead, upper eyelid*
+      - **Supraorbital nerve**: *forehead, frontal sinus, upper eyelid*
+
+    - **Lacrimal nerve**: *lacrimal gland, upper eyelid, parasympathetic fiber of pterygopalatine ganglion*
+    - **Nasociliary nerve**
+
+      - **Posterior ethmoidal nerve**: *sphenoid sinus, ethmoid sinus, anterior cranial fossa*
+      - **Anterior ethmoidal nerve**: *nasal cavity, dorsum of nose, ethmoid sinus, anterior cranial fossa*
+      - **Long ciliary nerve**: *eyeball, cornea, sympathetic fiber of superior cervical ganglion*
+      - **Short ciliary nerve**: *parasympathetic fiber of ciliary ganglion, sympathetic fiber of superior cervical ganglion*
+      - **Infratrochlear nerve**: *eyelid, lacrimal sac*
+
+    - **Meningeal branch**: *falx cerebri, tentorium cerebelli*
+
+  - **Maxillary nerve**
+
+    - **Zygomatic nerve**
+
+      - **Zygomaticotemporal nerve**: *side of forehead*
+      - **Zygomaticofacial nerve**: *prominence of cheek*
+      - **Communicating branch to lacrimal nerve**: *parasympathetic fiber of pterygopalatine ganglion*
+
+    - **Infraorbital nerve**: *lower eyelid, cheek, upper lip, side of nose*
+
+    - **Superior alveolar nerve**
+      
+      - **Posterior superior alveolar nerve**: *upper teeth, maxillary sinus*
+      - **Middle superior alveolar nerve**: *upper teeth*
+      - **Anterior superior alveolar nerve**: *upper teeth*
+
+    - **Pterygopalatine ganglionic branch**: *parasympathetic fiber of pterygopalatine ganglion*
+
+      - **Posterior nasal nerve**: *nasal cavity (lateral)*
+      - **Nasopalatine nerve**: *nasal cavity (septum), palate*
+      - **Greater palatine nerve**: *hard palate*
+      - **Lesser palatine nerve**: *soft palate*
+      - **Pharyngeal nerve**: *nasopharynx*
+  
+    - **Meningeal branch**: *middle cranial fossa*
+
+  - **Mandibular nerve**
+
+    - **Buccal nerve**: *cheek, buccal mucosa*
+    - **Auriculotemporal nerve**: *scalp, temporomandibular joint, external ear, parasympathetic fiber of otic ganglion*
+    - **Lingual nerve**: *anterior two-third of toungue, parasympathetic fiber of submandibular ganglion*
+    - **Inferior alveolar nerve**: *lower teeth*
+
+      - **Mental nerve**: *chin, lower lip*
+
+    - **Meningeal branch**: *middle cranial fossa*
+
+- **BE**
+
+  - **Mandibular nerve**
+
+    - **Deep temporal nerve**: *temporalis*
+    - **Masseteric nerve**: *masseter*
+    - **Medial pterygoid nerve**: *medial pterygoid*
+    - **Lateral pterygoid nerve**: *lateral pterygoid*
+    - **Nerve to tensor veli palatini**: *tensor veli palatini*
+    - **Nerve to tensor tympani**: *tensor tympani*
+    - **Nerve to mylohyoid**: *mylohyoid, anterior belly of digastric*
+
+### Abducent Nerve (CN VI)
+
+- **GSE**: *lateral rectus*
+
+### Facial Nerve (CN VII)
+
+- **GSA**: *external ear*
+- **SA**
+
+  - **Chorda tympani**: *taste of anterior two-third of tongue*
+
+- **GVE**
+
+  - **Pterygopalatine ganglion (greater petrosal nerve)**: *lacrimal gland, nasal & palatine & pharyngeal gland*
+  - **Submandibular ganglion (chorda tempani)**: *submandibular & sublingual gland* 
+
+- **BE**
+
+  - **Nerve to stapedius**: *stapedius*
+  - **Nerve to digastric**: *posterior belly of digastric*
+  - **Nerve to stylohyoid**: *stylohyoid*
+  - **Posterior auricular branch**: *muscle of scalp*
+  - **Temporal branch**: *muscle of face*
+  - **Zygomatic branch**: *muscle of face*
+  - **Buccal branch**: *muscle of face*
+  - **Marginal mandibular branch**: *muscle of face*
+  - **Cervical branch**: *platysma*
+
+### Vestibulocochlear Nerve (CN VIII)
+
+- **SA**
+
+  - **Vestibular nerve**: *balance*
+  - **Cochlear nerve**: *hearing*
+
+### Glossopharyngeal Nerve (CN IX)
+
+- **GSA**
+
+  - **Pharyngeal branch**: *oropharynx*
+  - **Lingual branch**: *posterior one-third of tongue*
+  - **Palatine branch**: *soft palate, palatine tonsil*
+  - **Tympanic branch**: *tympanic cavity, pharyngotympanic tube, mastoid air cell*
+
+- **GVA**
+
+  - **Carotid branch**: carotid sinus, carotid body
+
+- **SA**
+
+  - **Lingual branch**: *taste of posterior one-third of tongue*
+
+- **GVE**
+
+  - **Otic ganglion (lesser petrosal nerve)**: *parotid gland*
+
+- **BE**
+
+  - **Nerve to stylopharyngeus**: *stylopharyngeus* 
+
+### Vagus Nerve (CN X)
+
+- **GSA**
+  
+  - **Pharyngeal branch**: *laryngopharynx*
+  - **Internal branch of superior laryngeal nerve**: *larynx above vocal fold*
+  - **Recurrent laryngeal nerve**: *larynx below vocal fold*
+  - **Auricular branch**: *external ear*
+
+- **GVA**
+
+  - **Aortic branch**: *aortic body, aortic arch*
+  - **Cardiac branch**: *heart*
+  - **Pulmonary branch**: *bronchus, lung*
+  - **Esophageal branch**: *esophagus*
+  - **Anterior vagal trunk**: *abdominal viscera*
+  - **Posterior vagal trunk**: *abdominal viscera*
+
+- **SA**
+
+  - **Pharyngeal branch**: *taste of epiglottis & pharynx*
+
+- **GVE**
+
+  - **Terminal ganglion**: pharynx, larynx, thoracic viscera, abdominal viscera
+
+- **BE**
+
+  - **Pharyngeal branch**: *soft palate muscle (no tensor veli palatini), pharynx muscle (no stylopharynx)*
+  - **External branch of superior laryngeal nerve**: *cricothyroid*
+  - **Recurrent laryngeal nerve**: *larynx muscle (no cricothyroid)*
+
+### Accessory Nerve (CN XI)
+
+- **BE**: *sternocleidomastoid, trapezius*
+
+### Hypoglossal Nerve (CN XII)
+
+- **GSE**: *tongue muscle (no palatoglossus)*
+
+## Spinal Nerve
+
+### Cervical Plexus (C1-C5)
+
+- **Motor branch**
+
+  - **C1 with hypoglossal nerve (C1)**: *geniohyoid, thyrohyoid*
+  - **Ansa cervicalis (C1-C3)**: *sternohyoid, omohyoid, sternothyroid*
+  - **Phrenic nerve (C3-C5)**: *diaphragm*
+
+- **Sensory branch**
+
+  - **Lesser occipital nerve (C2)**: *scalp posterior to ear*
+  - **Greater auricular nerve (C2-C3)**: *parotid gland, outer ear*
+  - **Transverse cirvical nerve (C2-C3)**: *front of neck*
+  - **Supraclavicular nerve (C3-C4)**: *skin over shoulder*
+
+### Brachial Plexus (C5-T1)
+
+- **Root**
+
+  - **Dorsal scapular nerve (C4-C5)**: *levator scapulae, rhomboid major, rhomboid minor*
+  - **Long thoracic nerve (C5-C7)**: *serratus anterior*
+
+- **Trunk**
+
+  - **Superior trunk**
+
+    - **Suprascapular nerve (C5-C6)**: *supraspinatus, infraspinatus*
+    - **Nerve to subclavius (C5-C6)**: *subclavius*
+
+  - **Middle trunk**
+  - **Inferior trunk**
+
+- **Division**
+
+  - **Anterior division**
+  - **Posterior division**
+
+- **Cord**
+
+  - **Lateral cord**
+
+    - **Lateral pectoral nerve (C5-C7)**: *pectoralis major*
+
+  - **Posterior cord**
+
+    - **Superior subscapular nerve (C5-C6)**: *subscapularis*
+    - **Thoracodorsal nerve (C6-C8)**: *latissimus dorsi*
+    - **Inferior subscapular nerve (C5-C6)**: *subscapularis. teres major*
+
+  - **Medial cord**
+
+    - **Medial pectoral nerve (C8-T1)**: *pectoralis minor, pectoralis major*
+    - **Medial cutaneous nerve of arm (C8-T1)**: *medial arm*
+    - **Medial cutaneous nerve of forearm (C8-T1)**: *medial forearm*
+
+- **Terminal branch**
+
+  - **Axillary nerve (C5-C6)**: 
+  
+    - **Muscular branch**: *deltoid, teres minor*
+
+    - **Superior lateral cutaneous nerve of arm**: *superior lateral arm*
+
+  - **Musculocutaneous nerve (C5-C7)**: 
+  
+    - **Muscular branch**: *coracobrachialis, biceps brachii, brachialis*
+
+    - **Lateral cutaneous nerve of forearm**: *lateral forearm*
+
+  - **Radial nerve (C5-T1)**
+
+    - **Posterior cutaneous nerve of arm**: *posterior arm*
+    - **Inferior lateral cutaneous nerve of arm**: *inferior lateral arm*
+    - **Posterior cutaneous nerve of forearm**: *posterior forearm*
+    - **Muscular branch**: *triceps brachii, anconeus, brachioradialis, extensor carpi radialis longus*
+    - **Deep branch (posterior interosseous nerve)**: *extensor carpi radialis brevis, extensor digitorum, extensor digiti minimi, extensor carpi ulnaris, supinator, abductor pollicis longus, extensor pollicis brevis, extensor pollicis longus, extensor indicis*
+
+    - **Superficial branch**: *lateral 3.5 dorsum. lateral 3.5 dorsal digits*
+
+  - **Median nerve (C5-T1)**
+
+    - **Muscular branch**: *pronator teres, flexor carpi radialis, palmaris longus, flexor digitorum superficialis*
+    - **Anterior interosseous nerve**: *flexor pollicis longus, flexor digitorum progundus (lateral), pronator quadratus*
+    - **Palmar cutaneous branch**: *lateral 3.5 palm*
+    - **Recurrent branch**: *opponens pollicis, abductor pollicis brevis, flexor pollicis brevis*
+    - **Digital branch**: *lateral 3.5 palmar digits, lateral 2 lumbricals*
+
+  - **Ulnar nerve (C8-T1)**
+
+    - **Muscular branch**: *flexor carpi ulnaris, flexor digitorum profundus (medial)*
+    - **Palmar branch**: *medial 1.5 palm*
+    - **Dorsal branch**: *medial 1.5 dorsum, medial 1.5 dorsal digits*
+    - **Superficial branch**: *medial 1.5 palmar digits, palmaris brevis*
+    - **Deep branch**: *opponens digiti minimi, abductor digiti minimi, flexor digiti minimi brevis, medial 2 lumbricals, adductor pollicis, pamlar interossei, dorsal interossei*
+
+### Thoracic Spinal Nerve (T1-T12)
+
+- **Intercostal nerve (T1-T11)**: *muscle of thoracic wall*
+
+  - **Lateral cutaneous branch**: *lateral thoracic & abdominal wall*
+  - **Anterior cutaneous branch**: *anterior thoracic & abdominal wall*
+
+- **Subcostal nerve (T12)**
+
+### Lumbar Plexus (T12-L4)
+
+- **Iliohypogastric nerve (L1)**: 
+- **Ilioinguinal nerve (L1)**: 
+- **Genitofemoral nerve (L1-L2)**
+- **Lateral cutaneous nerve of thigh (L2-L3)**
+- **Obturator nerve (L2-L4)**
+- **Femoral nerve (L2-L4)**
+
+  - **Motor**: *iliacus, vastus medialis, vastus intermedius, *
+
+### Sacral Plexus
+
+- **Superior gluteal nerve**
+- **Inferior gluteal nerve**
+- **Posterior cutaneous nerve of thigh**
+- **Nerve to piriformis**
+- **Nerve to obturator internus**
+- **Nerve to quadratus femoris**
+- **Sciatic nerve**
+
+  - **Muscular branch**: *bicpes femoris, semitendinosus, semimembranosus*
+  - **Common fibular nerve**
+
+    - **Superficial fibular nerve**: *fibularis longus, fibularis brevis*
+    - **Deep fibular nerve**: *tibialis anterior, extensor hallucis longus, extensor digitorum longus, fibularis tertius, extensor hallucis brevis, extensor digitorum brevis*
+
+  - **Tibial nerve**
+
+    - **Musculalr branch**: *gastrocnemius, plantaris, Soleus, popliteus, flexor hallucis longus, flexor digitorum longus, tibialis posterior*
+    - **Medial plantar nerve**: *abductor hallucis, flexor digitorum brevis, 1st lumbrical, flexor hallucis brevis*
+    - **Lateral plantar nerve**: *abductor digiti minimi, quadratus plantae, 2nd-4th lumbricals, adductor hallucis, flexor digiti minimi brevis, plantar interossei, dorsal interossei*
+
+- **Pudendal nerve**
+- **Pelvic splanchnic nerve**
+
+### Posterior Rami of Spinal Nerve
+
+- **Cutaneous branch**
+- **Motor branch**

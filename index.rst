@@ -7,5 +7,3 @@
    medicine/index
    computer/index
    others/index
-
-   working/index

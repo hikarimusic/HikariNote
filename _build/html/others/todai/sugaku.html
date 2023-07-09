@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>数学 &#8212; HikariNote  documentation</title>
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
+
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/code-tabs.css" />
+
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/code-tabs.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
+
+    
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
+
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    <img src="../../_static/banner.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../_static/banner.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="fas fa-bars"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../medicine/index.html">
+  <strong>
+   Medicine
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../computer/index.html">
+  <strong>
+   Computer
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../index.html">
+  <strong>
+   Others
+  </strong>
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/hikarimusic/HikariNote" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
+          
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
+
+          
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   極限
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     数列の極限
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     無限級数
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     関数の極限
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   微分法
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     導関数
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     様々な導関数
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id9">
+   積分法
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     不定積分
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     定積分
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
+
+          
+          
+          <div class="bd-content col-12 col-md-9 col-xl-7">
+              
+              <article class="bd-article" role="main">
+                
+  <section id="id1">
+<h1>数学<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<section id="id2">
+<h2>極限<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<section id="id3">
+<h3>数列の極限<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>極限の基本</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\lim_{n\to\infty}ka_n=k\alpha\quad\lim_{n\to\infty}(a_n+b_n)=\alpha+\beta\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{n\to\infty}a_n b_n=\alpha\beta\quad\lim_{n\to\infty}\frac{a_n}{b_n}=\frac{\alpha}{\beta}\;(\beta\neq0)\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>はさみうちの原理</strong></p>
+<ul>
+<li><p>すべての <span class="math notranslate nohighlight">\(n\)</span> で <span class="math notranslate nohighlight">\(a_n\leq b_n\)</span>： <span class="math notranslate nohighlight">\(\alpha\leq\beta\)</span></p></li>
+<li><p>すべての <span class="math notranslate nohighlight">\(n\)</span> で <span class="math notranslate nohighlight">\(a_n\leq c_n\leq b_n\)</span> かつ <span class="math notranslate nohighlight">\(\alpha=\beta\)</span>： <span class="math notranslate nohighlight">\(\lim_{n\to\infty}c_n=\alpha\)</span></p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{n^k}\)</span> <strong>の極限</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(k&gt;0\)</span> ： <span class="math notranslate nohighlight">\(\lim_{n\to\infty}n^k=\infty\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(k&lt;0\)</span> ： <span class="math notranslate nohighlight">\(\lim_{n\to\infty}n^k=0\)</span></p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{r^n}\)</span> <strong>の極限</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(r&gt;1\)</span> ： <span class="math notranslate nohighlight">\(\lim_{n\to\infty}r^n=\infty\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(r=1\)</span> ： <span class="math notranslate nohighlight">\(\lim_{n\to\infty}r^n=1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(-1&lt;r&lt;1\)</span> ： <span class="math notranslate nohighlight">\(\lim_{n\to\infty}r^n=0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(r\leq-1\)</span> ：極限がない</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id4">
+<h3>無限級数<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>定義</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(S_n=\sum_{k=1}^n a_k\)</span> が <span class="math notranslate nohighlight">\(S\)</span> に収束：無限級数が <span class="math notranslate nohighlight">\(S\)</span> 収束</p></li>
+<li><p><span class="math notranslate nohighlight">\(S_n=\sum_{k=1}^n a_k\)</span> が発散：無限級数が発散</p></li>
+</ul>
+</li>
+<li><p><strong>収束・発散</strong></p>
+<ul>
+<li><p>無限級数 <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty a_n\)</span> が収束： <span class="math notranslate nohighlight">\(\lim_{n\to\infty}a_n=0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{n\to\infty}a_n\neq0\)</span> ：無限級数 <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty a_n\)</span> が発散</p></li>
+</ul>
+</li>
+<li><p><strong>無限等比級数</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(a\neq0,\;|r|&lt;1\)</span> ：収束、和は <span class="math notranslate nohighlight">\(\frac{a}{1-r}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a\neq0,\;|r|\geq1\)</span> ：発散</p></li>
+<li><p><span class="math notranslate nohighlight">\(a=0\)</span> ：収束、和は <span class="math notranslate nohighlight">\(0\)</span></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id5">
+<h3>関数の極限<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>極限の基本</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\to a}kf(x)=k\alpha\quad\lim_{x\to a}\left\{f(x)+g(x)\right\}=\alpha+\beta\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\to a}f(x)g(x)=\alpha\beta\quad\lim_{x\to a}\frac{f(x)}{g(x)}=\frac{\alpha}{\beta}\;(\beta\neq0)\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>はさみうちの原理</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(x\)</span> が <span class="math notranslate nohighlight">\(a\)</span> に近い時 <span class="math notranslate nohighlight">\(f(x)\leq g(x)\)</span>： <span class="math notranslate nohighlight">\(\alpha\leq\beta\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x\)</span> が <span class="math notranslate nohighlight">\(a\)</span> に近い時 <span class="math notranslate nohighlight">\(f(x)\leq h(x)\leq g(x)\)</span> かつ <span class="math notranslate nohighlight">\(\alpha=\beta\)</span>： <span class="math notranslate nohighlight">\(\lim_{x\to a}h(x)=\alpha\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>様々な極限</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\to\infty}a^x=\infty\quad\lim_{x\to -\infty}a^x=0\)</span> ( <span class="math notranslate nohighlight">\(a&gt;1\)</span> )</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\to\infty}a^x=0\quad\lim_{x\to -\infty}a^x=\infty\)</span> ( <span class="math notranslate nohighlight">\(0&lt;a&lt;1\)</span> )</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\to\infty}\log_a x=\infty\quad\lim_{x\to +0}a^x=-\infty\)</span> ( <span class="math notranslate nohighlight">\(a&gt;1\)</span> )</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\to\infty}\log_a x=-\infty\quad\lim_{x\to +0}\log_a x=\infty\)</span> ( <span class="math notranslate nohighlight">\(0&lt;a&lt;1\)</span> )</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\to 0}\frac{\sin x}{x}=1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{h\to 0}(1+h)^{\frac{1}{h}}=e\quad\lim_{h\to 0}\frac{e^h-1}{h}=e\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>連続性と中間値の定理</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(f(x)\)</span> が <span class="math notranslate nohighlight">\(x=a\)</span> で連続： <span class="math notranslate nohighlight">\(\lim_{x\to a}f(x)=f(a)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x)\)</span> が区間 <span class="math notranslate nohighlight">\([a, b]\)</span> で連続、 <span class="math notranslate nohighlight">\(f(a)\neq f(b)\)</span> ： <span class="math notranslate nohighlight">\(f(a)\)</span> と <span class="math notranslate nohighlight">\(f(b)\)</span> の間の <span class="math notranslate nohighlight">\(k\)</span> に対して <span class="math notranslate nohighlight">\(f(c)=k,\;a&lt;c&lt;b\)</span> を満たす <span class="math notranslate nohighlight">\(c\)</span> が存在する</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="id6">
+<h2>微分法<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
+<section id="id7">
+<h3>導関数<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>定義</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>公式</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\((x^\alpha)'=\alpha x^{\alpha-1}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\left\{kf(x)\right\}'=kf'(x)\quad\left\{f(x)+g(x)\right\}'=f'(x)+g'(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\left\{f(x)g(x)\right\}'=f'(x)g(x)+f(x)g'(x)\quad\left\{\frac{f(x)}{g(x)}\right\}'=\frac{f'(x)g(x)-f(x)g'(x)}{{g(x)}^2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{dy}{dx}=\frac{1}{\frac{dx}{dy}}\)</span></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id8">
+<h3>様々な導関数<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>様々な導関数</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\((\sin x)'=\cos x'\quad (\cos x)'=-\sin x\quad (\tan x)'=\frac{1}{\cos^2 x}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((\log|x|)'=\frac{1}{x}\quad (\log_a|x|)'=\frac{1}{x\log a}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((e^x)'=e^x\quad (a^x)'=a^x\log a\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>その他</strong></p>
+<ul>
+<li><p>高次導関数： <span class="math notranslate nohighlight">\(f^{(n)}(x)=\frac{d^n}{dx^n}f(x)\)</span></p></li>
+<li><p>陰関数の微分： <span class="math notranslate nohighlight">\(F(x, y)=0\)</span> の両辺を <span class="math notranslate nohighlight">\(x\)</span> で微分する、 <span class="math notranslate nohighlight">\(\frac{df(y)}{dx}=\frac{df(y)}{dy}\frac{dy}{dx}\)</span></p></li>
+<li><p>媒介変数の微分： <span class="math notranslate nohighlight">\(\frac{dy}{dx}=\frac{\frac{dy}{dt}}{\frac{dx}{dt}}\)</span></p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="id9">
+<h2>積分法<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
+<section id="id10">
+<h3>不定積分<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>基本的な積分</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\int x^\alpha\,dx=\frac{x^{\alpha+1}}{\alpha+1}+C\quad\int\frac{dx}{x}=\log|x|+C\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\int\sin x\,dx=-\cos x+C\quad\int\cos x\,dx=\sin x+C\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\int\frac{dx}{\cos^2 x}=\tan x +C\quad\int\frac{dx}{\sin^2 x}=-\frac{1}{\tan x}+C\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\int e^x\,dx=e^x+C\quad\int a^x\,dx=\frac{a^x}{\log a}+C\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>置換積分法</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\int f(g(x))g'(x)\,dx=\int f(u)\,du,\;u=g(x)\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>部分積分法</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\int f(x)g'(x)\,dx=f(x)g(x)-\int f'(x)g(x)\,dx\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>分数関数の積分</strong></p>
+<ul>
+<li><p>分母が <span class="math notranslate nohighlight">\((ax+b)^n\)</span> ： <span class="math notranslate nohighlight">\(ax+b=t\)</span> 置換</p></li>
+<li><p>分母が <span class="math notranslate nohighlight">\(a(x+\alpha)(x+\beta)\)</span> ： 部分分数に分解</p></li>
+<li><p>分母が <span class="math notranslate nohighlight">\(a(x+p)^2+q\)</span> ： <span class="math notranslate nohighlight">\(\sqrt{\frac{a}{q}}(x+p)=\tan\theta\)</span> 置換</p></li>
+</ul>
+</li>
+<li><p><strong>無理関数の積分</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\sqrt{ax+b}\)</span> ： <span class="math notranslate nohighlight">\(\sqrt{ax+b}=t\)</span> 置換</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sqrt{x^2+A}\)</span> ： <span class="math notranslate nohighlight">\(x+\sqrt{x^2+A}=t\)</span> 置換</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sqrt{a^2-x^2}\)</span> ： <span class="math notranslate nohighlight">\(x=a\sin\theta\)</span> 置換</p></li>
+</ul>
+</li>
+<li><p><strong>三角関数の積分</strong></p>
+<ul>
+<li><p>次数を１次に下げ</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(\sin\theta)\cos\theta\)</span> , <span class="math notranslate nohighlight">\(f(\cos\theta)\sin\theta\)</span> にして置換</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id11">
+<h3>定積分<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>偶関数・奇関数の積分</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(f(x)\)</span> が偶関数： <span class="math notranslate nohighlight">\(\int_{-a}^a f(x)\,dx=2\int_0^a f(x)\,dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x)\)</span> が奇関数： <span class="math notranslate nohighlight">\(\int_{-a}^a f(x)\,dx=0\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>定積分関数の微分</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\frac{d}{dx}\int_a^x f(t)\,dt=f(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{d}{dx}\int_{h(x)}^{g(x)}f(t)\,dt=f(g(x))g'(x)-f(h(x))h'(x)\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>区分求積法</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\int_a^b f(x)\,dx=\lim_{n\to\infty}\sum_{k=0}^{n-1}f(x_k)\Delta x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\int_0^1 f(x)\,dx=\lim_{n\to\infty}\frac{1}{n}\sum_{k=0}^{n-1}f\left(\frac{k}{n}\right)\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>定積分と不定式</strong></p>
+<ul>
+<li><p>区間 <span class="math notranslate nohighlight">\([a, b]\)</span> で <span class="math notranslate nohighlight">\(f(x)\geq g(x)\)</span> ： <span class="math notranslate nohighlight">\(\int_a^b f(x)\,dx\geq\int_a^b g(x)\,dx\)</span></p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+
+
+              </article>
+              
+
+              
+              <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              </footer>
+              
+          </div>
+          
+      </div>
+    </div>
+
+  
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
+    &copy; Copyright 2023, HikariMusic.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
+</p>
+  </div>
+  
+</div>
+</footer>
+  </body>
+</html>

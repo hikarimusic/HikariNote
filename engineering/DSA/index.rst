@@ -6,3 +6,6 @@
 
     data_structure
     data_structure_advanced
+    sort_and_search
+    greedy_algorithm 
+    dynamic_programming 

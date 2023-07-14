@@ -5,5 +5,4 @@
    :maxdepth: 2
 
    medicine/index
-   computer/index
-   others/index
+   engineering/index

@@ -1158,6 +1158,134 @@ Suffix Tree
 K-Dimensional Tree
 ------------------
 
+:insert: :math:`O(N)`
+:delete: :math:`O(N)`
+:search: :math:`O(N)`
+
+.. tabs::
+
+    .. code-tab:: python
+
+        class Node:
+            def __init__(self, dim, data):
+                self.data = [x for x in data]
+                self.depth = -1
+                self.left = None
+                self.right = None
+                self.parent = None
+
+        class KDimensionalTree:
+            def __init__(self, dim):
+                self.dim = dim
+                self.null = Node(self.dim, [0 for i in range(dim)])
+                self.root = self.null
+
+            def equal(self, x, y):
+                for i in range(self.dim):
+                    if x[i] != y[i]:
+                        return False
+                return True
+
+            def minode(self, x, dim):
+                res = x
+                if x.left != self.null and self.minode(x.left, dim).data[dim] < x.data[dim]:
+                    res = x.left
+                if x.depth%self.dim != dim and x.right != self.null and self.minode(x.right, dim).data[dim] < x.data[dim]:
+                    res = x.right
+                return res
+            
+            def delete_node(self, x):
+                if x.right != self.null:
+                    y = self.minode(x.right, x.depth%self.dim)
+                    for i in range(self.dim):
+                        x.data[i] = y.data[i]
+                    self.delete_node(y)
+                elif x.left != self.null:
+                    y = self.minode(x.left, x.depth%self.dim)
+                    for i in range(self.dim):
+                        x.data[i] = y.data[i]
+                    x.right = x.left
+                    x.left = self.null
+                    self.delete_node(y)
+                else:
+                    if x.parent == self.null:
+                        self.root = self.null
+                    elif x == x.parent.left:
+                        x.parent.left = self.null
+                    else:
+                        x.parent.right = self.null
+            
+            def insert(self, data):
+                x = Node(self.dim, data)
+                x.left = self.null
+                x.right = self.null
+                p = self.null
+                c = self.root
+                lr = 0
+                while c != self.null:
+                    p = c
+                    if data[c.depth%self.dim] < c.data[c.depth%self.dim]:
+                        c = c.left
+                        lr = 0
+                    else:
+                        c = c.right
+                        lr = 1
+                if p == self.null:
+                    self.root = x
+                elif lr == 0:
+                    p.left = x
+                else:
+                    p.right = x
+                x.parent = p
+                x.depth = p.depth + 1
+            
+            def delete(self, data):
+                x = self.root
+                while x != self.null and not self.equal(x.data, data):
+                    if data[x.depth%self.dim] < x.data[x.depth%self.dim]:
+                        x = x.left
+                    else:
+                        x = x.right
+                if x == self.null:
+                    return False
+                self.delete_node(x)
+
+            def search(self, data):
+                x = self.root
+                while x != self.null and not self.equal(x.data, data):
+                    if data[x.depth%self.dim] < x.data[x.depth%self.dim]:
+                        x = x.left
+                    else:
+                        x = x.right
+                if x == self.null:
+                    return False
+                return True
+
+        if __name__ == '__main__':
+            tree = KDimensionalTree(2)
+            tree.insert([7, 8])
+            tree.insert([2, 4])
+            tree.insert([10, 1])
+            tree.insert([8, 9])
+            tree.insert([9, 8])
+            tree.delete([8, 9])
+            tree.insert([6, 7])
+            tree.insert([1, 4])
+            tree.insert([4, 10])
+            tree.delete([7, 8])
+            tree.delete([4, 10])
+            tree.insert([3, 2])
+            tree.delete([6, 7])
+            tree.insert([5, 10])
+            for i in range(1, 11):
+                for j in range(1, 11):
+                    if tree.search([i, j]):
+                        print([i, j])
+
+    .. code-tab:: c++
+
+        working
+
 Fibonacci Heap
 --------------
 

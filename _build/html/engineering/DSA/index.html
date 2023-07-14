@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Data Structure &amp; Algorithm &#8212; HikariNote  documentation</title>
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
+
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/code-tabs.css" />
+
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/code-tabs.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Data Structure" href="data_structure.html" />
+    <link rel="prev" title="Engineering" href="../index.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
+
+    
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
+
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    <img src="../../_static/banner.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../_static/banner.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="fas fa-bars"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../medicine/index.html">
+  <strong>
+   Medicine
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../index.html">
+  <strong>
+   Engineering
+  </strong>
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/hikarimusic/HikariNote" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
+          
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   <strong>
+    Data Structure &amp; Algorithm
+   </strong>
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data_structure.html">
+     Data Structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data_structure_advanced.html">
+     Data Structure (Advanced)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sort_and_search.html">
+     Sort and Search
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="greedy_algorithm.html">
+     Greedy Algorithm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dynamic_programming.html">
+     Dynamic Programming
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+  </div>
+</nav>
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
+
+          
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+
+<nav id="bd-toc-nav">
+    
+</nav>
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
+
+          
+          
+          <div class="bd-content col-12 col-md-9 col-xl-7">
+              
+              <article class="bd-article" role="main">
+                
+  <section id="data-structure-algorithm">
+<h1><strong>Data Structure &amp; Algorithm</strong><a class="headerlink" href="#data-structure-algorithm" title="Permalink to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_structure.html">Data Structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data_structure.html#array">Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_structure.html#linked-list">Linked List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_structure.html#stack">Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_structure.html#queue">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_structure.html#binary-tree">Binary Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_structure.html#binary-search-tree">Binary Search Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_structure.html#binary-heap">Binary Heap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_structure.html#hash-table">Hash Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_structure.html#graph">Graph</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data_structure_advanced.html">Data Structure (Advanced)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data_structure_advanced.html#avl-tree">AVL Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_structure_advanced.html#splay-tree">Splay Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_structure_advanced.html#treap">Treap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_structure_advanced.html#red-black-tree">Red-Black Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_structure_advanced.html#b-tree">B-Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_structure_advanced.html#segment-tree">Segment Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_structure_advanced.html#fenwick-tree">Fenwick Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_structure_advanced.html#trie">Trie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_structure_advanced.html#suffix-tree">Suffix Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_structure_advanced.html#k-dimensional-tree">K-Dimensional Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_structure_advanced.html#fibonacci-heap">Fibonacci Heap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_structure_advanced.html#disjoint-set">Disjoint Set</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sort_and_search.html">Sort and Search</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sort_and_search.html#selection-sort">Selection Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sort_and_search.html#bubble-sort">Bubble Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sort_and_search.html#insertion-sort">Insertion Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sort_and_search.html#merge-sort">Merge Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sort_and_search.html#quick-sort">Quick Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sort_and_search.html#heap-sort">Heap Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sort_and_search.html#counting-sort">Counting Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sort_and_search.html#radix-sort">Radix Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sort_and_search.html#bucket-sort">Bucket Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sort_and_search.html#linear-search">Linear Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sort_and_search.html#binary-search">Binary Search</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="greedy_algorithm.html">Greedy Algorithm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="greedy_algorithm.html#activity-selection">Activity Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="greedy_algorithm.html#job-sequencing">Job Sequencing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="greedy_algorithm.html#huffman-coding">Huffman Coding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="greedy_algorithm.html#fractional-knapsack">Fractional Knapsack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="greedy_algorithm.html#minimum-coin">Minimum Coin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="greedy_algorithm.html#fitting-shelves">Fitting Shelves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="greedy_algorithm.html#minimum-platform">Minimum Platform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="greedy_algorithm.html#bracket-balancing">Bracket Balancing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="greedy_algorithm.html#assign-mice-to-hole">Assign Mice to Hole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="greedy_algorithm.html#policeman-catch-thieves">Policeman Catch Thieves</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dynamic_programming.html">Dynamic Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dynamic_programming.html#longest-common-subsequence">Longest Common Subsequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamic_programming.html#longest-increasing-subsequence">Longest Increasing Subsequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamic_programming.html#edit-distance">Edit Distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamic_programming.html#min-cost-path">Min Cost Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamic_programming.html#knapsack">0-1 Knapsack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamic_programming.html#rod-cutting">Rod Cutting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamic_programming.html#coin-change">Coin Change</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamic_programming.html#partition-problem">Partition Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamic_programming.html#matrix-chain-multiplication">Matrix Chain Multiplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamic_programming.html#optimal-strategy">Optimal Strategy</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+              </article>
+              
+
+              
+              <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="../index.html" title="previous page">
+      <i class="fas fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title"><strong>Engineering</strong></p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="data_structure.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Data Structure</p>
+  </div>
+  <i class="fas fa-angle-right"></i>
+  </a>
+</div>
+              </footer>
+              
+          </div>
+          
+      </div>
+    </div>
+
+  
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
+    &copy; Copyright 2023, HikariMusic.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
+</p>
+  </div>
+  
+</div>
+</footer>
+  </body>
+</html>

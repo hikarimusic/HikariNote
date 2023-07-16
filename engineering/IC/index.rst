@@ -5,3 +5,4 @@
     :maxdepth: 2
 
     combinational_circuit
+    sequential_circuit

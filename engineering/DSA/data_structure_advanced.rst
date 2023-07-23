@@ -155,9 +155,9 @@ AVL Tree
 Splay Tree 
 ----------
 
-:insert: :math:`O(\log{N})` (averaged)
-:delete: :math:`O(\log{N})` (averaged)
-:search: :math:`O(\log{N})` (averaged)
+:insert: :math:`O(\log{N})\;\text{(amortized)}`
+:delete: :math:`O(\log{N})\;\text{(amortized)}`
+:search: :math:`O(\log{N})\;\text{(amortized)}`
 
 .. tabs::
 
@@ -309,9 +309,9 @@ Splay Tree
 Treap
 -----
 
-:insert: :math:`O(\log{N})` (averaged)
-:delete: :math:`O(\log{N})` (averaged)
-:search: :math:`O(\log{N})` (averaged)
+:insert: :math:`O(\log{N})\;\text{(amortized)}`
+:delete: :math:`O(\log{N})\;\text{(amortized)}`
+:search: :math:`O(\log{N})\;\text{(amortized)}`
 
 .. tabs::
 
@@ -1289,12 +1289,128 @@ K-Dimensional Tree
 Fibonacci Heap
 --------------
 
+:push: :math:`O(1)`
+:pop: :math:`O(\log{N})\;\text{(amortized)}`
+:peek: :math:`O(1)`
+
+.. tabs::
+
+    .. code-tab:: python
+
+        class Node:
+            def __init__(self, data):
+                self.data = data
+                self.degree = 0
+                self.child = None
+                self.parent = None
+                self.right = self
+                self.left = self
+
+        class FibonacciHeap:
+            def __init__(self):
+                self.root = Node(0)
+                self.size = 0
+
+            def append(self, p, c):
+                t = c
+                while t.parent != p:
+                    p.degree += 1
+                    t.parent = p
+                    t = t.right
+                if not p.child:
+                    p.child = c
+                    return
+                b = p.child
+                if c.data < b.data:
+                    p.child = c
+                b.left.right = c.right
+                c.right.left = b.left
+                b.left = c
+                c.right = b
+                    
+            def remove(self, x):
+                if x.right == x:
+                    x.parent.degree = 0
+                    x.parent.child = None
+                    x.parent = None
+                    return
+                x.parent.degree -= 1
+                if x.parent.child == x:
+                    x.parent.child = x.right
+                x.parent = None
+                x.right.left = x.left
+                x.left.right = x.right
+                x.right = x
+                x.left = x
+            
+            def consolidate(self):
+                if not self.root.child:
+                    return
+                arr = [None for i in range(self.size)]
+                t = self.root.child
+                for i in range(self.root.degree):
+                    x = t
+                    t = t.right
+                    if x.data < self.root.child.data:
+                        self.root.child = x
+                    while arr[x.degree]:
+                        y = arr[x.degree]
+                        if y.data < x.data:
+                            x, y = y, x
+                        self.remove(y)
+                        arr[y.degree] = None
+                        self.append(x, y)
+                    arr[x.degree] = x
+            
+            def push(self, data):
+                x = Node(data)
+                self.append(self.root, x)
+                self.size += 1
+            
+            def pop(self):
+                if not self.root.child:
+                    return
+                x = self.root.child
+                if x.child:
+                    self.append(self.root, x.child)
+                self.remove(x)
+                self.consolidate()
+                self.size -= 1
+            
+            def peek(self):
+                return self.root.child.data
+
+        if __name__ == '__main__':
+            heap = FibonacciHeap()
+            heap.push(2)
+            heap.push(6)
+            heap.push(1)
+            heap.pop()
+            heap.push(10)
+            heap.push(3)
+            heap.push(9)
+            heap.pop()
+            heap.push(5)
+            heap.push(7)
+            heap.push(4)
+            heap.push(8)
+            heap.pop()
+            print(heap.peek())
+            heap.pop()
+            print(heap.peek())
+            heap.pop()
+            print(heap.peek())
+
+    .. code-tab:: c++
+
+        working
+
 Disjoint Set 
 ------------
 
 :build: :math:`O(N)`
-:find: :math:`O(\alpha(N))` (about :math:`O(1)` )
-:union: :math:`O(\alpha(N))` (about :math:`O(1)` )
+:find: :math:`O(\alpha(N))\;\text{(about constant)}`
+:union: :math:`O(\alpha(N))\;\text{(about constant)}`
 
 .. tabs::
 

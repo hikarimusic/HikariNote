@@ -16,6 +16,17 @@ Queue
 Binary Tree 
 -----------
 
+.. tabs::
+
+    .. code-tab:: python
+
+        working
+
+    .. code-tab:: c++
+
+        working
+
+
 Binary Search Tree
 ------------------
 

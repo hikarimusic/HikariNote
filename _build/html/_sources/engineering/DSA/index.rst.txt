@@ -9,3 +9,5 @@
     sort_and_search
     greedy_algorithm 
     dynamic_programming 
+    divide_and_conquer
+    backtracking 

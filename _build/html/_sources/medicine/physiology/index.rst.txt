@@ -4,7 +4,7 @@
 .. toctree::
     :maxdepth: 2
 
-    cell 
+    cell_physiology
     nervous_system
     cardiovascular_system
     respiratory_system

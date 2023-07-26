@@ -1,0 +1,717 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Genetic Information (DNA &amp; RNA) &#8212; HikariNote  documentation</title>
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
+
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/code-tabs.css" />
+
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/code-tabs.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Genetic Information (Protein &amp; Others)" href="genetic_information_protein_others.html" />
+    <link rel="prev" title="Nutrition" href="nutrition.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
+
+    
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
+
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    <img src="../../_static/banner.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../_static/banner.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="fas fa-bars"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../index.html">
+  <strong>
+   Medicine
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../engineering/index.html">
+  <strong>
+   Engineering
+  </strong>
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/hikarimusic/HikariNote" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
+          
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../anatomy/index.html">
+   <strong>
+    Anatomy
+   </strong>
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../anatomy/introduction.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../anatomy/head.html">
+     Head
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../anatomy/neck.html">
+     Neck
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../anatomy/back.html">
+     Back
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../anatomy/thorax.html">
+     Thorax
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../anatomy/abdomen.html">
+     Abdomen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../anatomy/pelvis_and_perineum.html">
+     Pelvis &amp; Perineum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../anatomy/upper_limb.html">
+     Upper Limb
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../anatomy/lower_limb.html">
+     Lower Limb
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../physiology/index.html">
+   <strong>
+    Physiology
+   </strong>
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../physiology/cell_physiology.html">
+     Cell Physiology
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../physiology/nervous_system.html">
+     Nervous System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../physiology/cardiovascular_system.html">
+     Cardiovascular System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../physiology/respiratory_system.html">
+     Respiratory System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../physiology/urinary_system.html">
+     Urinary System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../physiology/gastrointestinal_system.html">
+     Gastrointestinal System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../physiology/endocrine_system.html">
+     Endocrine System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../physiology/reproductive_system.html">
+     Reproductive System
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../pharmacology/index.html">
+   <strong>
+    Pharmacology
+   </strong>
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pharmacology/basic_principle.html">
+     Basic Principle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pharmacology/autonomic_nervous_system_drug.html">
+     Autonomic Nervous System Drug
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pharmacology/central_nervous_system_drug.html">
+     Central Nervous System Drug
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pharmacology/renal_cardiovascular_drug.html">
+     Renal &amp; Cardiovascular Drug
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pharmacology/pulmonary_gastrointestinal_drug.html">
+     Pulmonary &amp; Gastrointestinal Drug
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pharmacology/immune_hematologic_drug.html">
+     Immune &amp; Hematologic Drug
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pharmacology/endocrine_drug.html">
+     Endocrine Drug
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pharmacology/antimicrobial_drug.html">
+     Antimicrobial Drug
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pharmacology/chemotherapeutic_drug.html">
+     Chemotherapeutic Drug
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pharmacology/toxicology.html">
+     Toxicology
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../pathology/index.html">
+   <strong>
+    Pathology
+   </strong>
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pathology/cellular_injury_inflammation.html">
+     Cellular Injury &amp; Inflammation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pathology/neoplasia_genetic_disorder.html">
+     Neoplasia &amp; Genetic Disorder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pathology/immune_infectious_disease.html">
+     Immune &amp; Infectious Disease
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pathology/environmental_nutritional_disease.html">
+     Environmental &amp; Nutritional Disease
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pathology/cardiovascular_disease.html">
+     Cardiovascular Disease
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pathology/respiratory_disease.html">
+     Respiratory Disease
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pathology/gastrointestinal_disease.html">
+     Gastrointestinal Disease
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pathology/renal_disease.html">
+     Renal Disease
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pathology/reproductive_disease.html">
+     Reproductive Disease
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pathology/hematologic_disease.html">
+     Hematologic Disease
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pathology/endocrine_disease.html">
+     Endocrine Disease
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pathology/neurologic_disease.html">
+     Neurological Disease
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pathology/musculoskeletal_skin_disease.html">
+     Musculoskeletal &amp; Skin Disease
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   <strong>
+    Biochemistry
+   </strong>
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="protein.html">
+     Protein
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bioenergetics.html">
+     Bioenergetics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="carbohydrate_metabolism.html">
+     Carbohydrate Metabolism
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lipid_metabolism.html">
+     Lipid Metabolism
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nitrogen_metabolism.html">
+     Nitrogen Metabolism
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="integration_metabolism.html">
+     Integration of Metabolism
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nutrition.html">
+     Nutrition
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Genetic Information (DNA &amp; RNA)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="genetic_information_protein_others.html">
+     Genetic Information (Protein &amp; Others)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../cell_molecular_biology/index.html">
+   <strong>
+    Cell &amp; Molecular Biology
+   </strong>
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cell_molecular_biology/cell_structure.html">
+     Cell Structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cell_molecular_biology/gene_expression.html">
+     Gene Expression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cell_molecular_biology/membrane_transport.html">
+     Membrane Transport
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cell_molecular_biology/cell_signaling.html">
+     Cell Signaling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cell_molecular_biology/cell_cycle.html">
+     Cell Cycle
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+  </div>
+</nav>
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
+
+          
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dna-replication-repair">
+   DNA Replication &amp; Repair
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dna-structure">
+     DNA Structure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prokaryotic-dna-replication">
+     Prokaryotic DNA Replication
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eukaryotic-dna-replication">
+     Eukaryotic DNA Replication
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dna-repair">
+     DNA Repair
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rna-synthesis-processing">
+   RNA Synthesis &amp; Processing
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rna-structure">
+     RNA Structure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prokaryotic-gene-transcription">
+     Prokaryotic Gene Transcription
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eukaryotic-gene-transcription">
+     Eukaryotic Gene Transcription
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#posttranscriptional-modification">
+     Posttranscriptional Modification
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
+
+          
+          
+          <div class="bd-content col-12 col-md-9 col-xl-7">
+              
+              <article class="bd-article" role="main">
+                
+  <section id="genetic-information-dna-rna">
+<h1>Genetic Information (DNA &amp; RNA)<a class="headerlink" href="#genetic-information-dna-rna" title="Permalink to this heading">#</a></h1>
+<section id="dna-replication-repair">
+<h2>DNA Replication &amp; Repair<a class="headerlink" href="#dna-replication-repair" title="Permalink to this heading">#</a></h2>
+<section id="dna-structure">
+<h3>DNA Structure<a class="headerlink" href="#dna-structure" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Nucleotide</strong>: <em>deoxyribose, phophate, base (adenine, thymine, cytosine, guanine)</em></p></li>
+<li><p><strong>Phosphodiester Bond</strong></p>
+<ul>
+<li><p><strong>Junction</strong>: <em>3’OH group of nucleotide 1 with 5’OH group of nucleotide 2 via phosphoryl group</em></p></li>
+<li><p><strong>Polarity</strong>: <em>5’end (free PO4 group), 3’end (free OH group), sequence written from 5’ to 3’</em></p></li>
+</ul>
+</li>
+<li><p><strong>Double helix</strong></p>
+<ul>
+<li><p><strong>Sturcture</strong>: <em>antiparallel, deoxyribose-phosphate backbone outside, base inside, twisted ladder structure, create major &amp; minor groove</em></p></li>
+<li><p><strong>Base pairing</strong>: <em>adenine with thymine, guanine with cytosine, held by hydrogen bond (2 between A-T, 3 between G-C)</em></p></li>
+<li><p><strong>Strand separation</strong>: <em>separate when H-bond disrupted (denaturation), by altered pH or heat, ssDNA has higher 260nm absorption, Tm defined as temparature of 50% separation, A-T rich DNA has lower Tm</em></p></li>
+<li><p><strong>Structural form</strong>: <em>B form (primary form, right-handed), A form (right-handed), Z form (left-handed)</em></p></li>
+<li><p><strong>Linear &amp; circular form</strong>: <em>eukaryotes: linear dsDNA (and circular mitochondrial DNA), prokaryotes: circular dsDNA (and plasmid)</em></p></li>
+</ul>
+</li>
+<li><p><strong>Eukaryotic DNA</strong></p>
+<ul>
+<li><p><strong>Histone</strong>: <em>positively charged (high lysine &amp; arginine), bind negative charged DNA</em></p></li>
+<li><p><strong>Nucleosome</strong>: <em>H2A &amp; H2B &amp; H3 &amp; H4 form octameric core, dsDNA round around, H1 bind to linker DNA</em></p></li>
+<li><p><strong>Histone modification</strong>: <em>acetylation &amp; methylation &amp; phosphorylation, affect gene expression, heritable (epigenetics)</em></p></li>
+<li><p><strong>Higher level organization</strong>: <em>nucleosome packed to form nucleofilament, furture packed to form chromosome</em></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="prokaryotic-dna-replication">
+<h3>Prokaryotic DNA Replication<a class="headerlink" href="#prokaryotic-dna-replication" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>General</strong>: <em>semiconservative replication, each strand of separated dsDNA serve as template</em></p></li>
+<li><p><strong>Complementary strand separation</strong>: <em>prokaryotes: single replication origin (called ori, AT-rich consensus sequence), eukaryotes: multiple replication origin</em></p></li>
+<li><p><strong>Replication fork formation</strong></p>
+<ul>
+<li><p><strong>DnaA protein</strong>: **</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="eukaryotic-dna-replication">
+<h3>Eukaryotic DNA Replication<a class="headerlink" href="#eukaryotic-dna-replication" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="dna-repair">
+<h3>DNA Repair<a class="headerlink" href="#dna-repair" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="rna-synthesis-processing">
+<h2>RNA Synthesis &amp; Processing<a class="headerlink" href="#rna-synthesis-processing" title="Permalink to this heading">#</a></h2>
+<section id="rna-structure">
+<h3>RNA Structure<a class="headerlink" href="#rna-structure" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="prokaryotic-gene-transcription">
+<h3>Prokaryotic Gene Transcription<a class="headerlink" href="#prokaryotic-gene-transcription" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="eukaryotic-gene-transcription">
+<h3>Eukaryotic Gene Transcription<a class="headerlink" href="#eukaryotic-gene-transcription" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="posttranscriptional-modification">
+<h3>Posttranscriptional Modification<a class="headerlink" href="#posttranscriptional-modification" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+</section>
+
+
+              </article>
+              
+
+              
+              <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="nutrition.html" title="previous page">
+      <i class="fas fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Nutrition</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="genetic_information_protein_others.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Genetic Information (Protein &amp; Others)</p>
+  </div>
+  <i class="fas fa-angle-right"></i>
+  </a>
+</div>
+              </footer>
+              
+          </div>
+          
+      </div>
+    </div>
+
+  
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
+    &copy; Copyright 2023, HikariMusic.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
+</p>
+  </div>
+  
+</div>
+</footer>
+  </body>
+</html>

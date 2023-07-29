@@ -9,3 +9,4 @@
     membrane_transport
     cell_signaling
     cell_cycle
+    genetics
